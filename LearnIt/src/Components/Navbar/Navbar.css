@@ -1,0 +1,114 @@
+.n-wrapper{
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(51, 183, 206);
+    
+
+}
+.logo{
+    background-image: url('./logo.jpg');
+    height: 51px;
+    width: 51px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+}
+.n-left{
+    flex:1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    margin-left: 10px;
+    color: rgb(5, 251, 5);
+}
+
+.n-name{
+                    font-family: 'Georgia', serif;
+                    font-size: 40px;
+                    color: #e5e4e9;
+                    
+            }
+    
+   
+
+.n-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-style:initial;
+}
+.n-list{
+    flex: 10;
+    
+}
+.n-list>ul{
+  
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    margin-right: 4rem;
+    cursor: pointer;
+    padding: 15px;
+    
+}
+li {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    top: 13px;
+    padding: 13px 13px;
+    margin: 5px;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.5s;
+}
+li::after{
+    content:'';
+    background:rgb(88, 50, 169);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+
+li:hover{
+    transition: .3s;
+    background-position: center;
+    color: rgb(187, 183, 195);
+}
+li:hover::after{
+    top: 50%;
+    opacity: 1;
+}
+a{
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+.n-button{
+    flex: 2;
+}
+
+@media screen and (max-width:480px) {
+    .n-list{
+        display: none;
+        
+    }
+    .n-button{
+        display: none;
+    }
+}

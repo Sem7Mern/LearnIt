@@ -6,6 +6,9 @@ function Welcome() {
   function viewPerformance(){
     navigate('/performance')
   }
+  function GiveTest(){
+    navigate('/test')
+  }
     return (
     <>
     <div className='welcome'>
@@ -15,7 +18,7 @@ function Welcome() {
         </div>
 <div className='right'>
 <button type="button" class="btn btn-success" style={{margin: "10px"}}>Profile</button>
-<button type="button" class="btn btn-success" style={{margin: "10px"}}>Give Test</button>
+<button type="button" onClick={GiveTest} class="btn btn-success" style={{margin: "10px"}}>Give Test</button>
 <button type="button" class="btn btn-success" style={{margin: "10px"}}>Provided Material</button>
 </div>
     </div>
@@ -23,4 +26,4 @@ function Welcome() {
   )
 }
 
-export default Welcome;
+export default Welcome

@@ -1,11 +1,11 @@
 import User from "../model/user.js";
 
-export const login = async (req, res) => {
+export const quiz = async (req, res) => {
     try {
-        const { email, password } = req.body;
+
 
         // Validate if the email and password exist in your MongoDB database
-        const user = await User.findOne({ email, password });
+        const user = await User.find({ email, password });
         console.log(user);
         if (user) {
             // User exists in the database

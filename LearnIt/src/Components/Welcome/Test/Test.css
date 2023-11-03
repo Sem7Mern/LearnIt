@@ -1,36 +1,34 @@
-.welcome{
+.test{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-
-        background-color: hsla(205, 86%, 47%, 0.7);
-   
+    flex-wrap: nowrap;
     }
-    .left{
+    .tleft{
         /* display: block; */
         display: flex;
     height: 300px;
-    width:700px;
+    width:800px;
     position: relative;
+    top: 50px;
     align-items: center;
     justify-content: center;
-    background-image: url('./IMG/success.png');
+    background-image: url('../IMG/Teachingfea.png');
+   background-size: cover;
     background-repeat: no-repeat;
     }
     
-    .right{
+    .tright{
         /* display: inline; */
         display: flex;
         height: 500px;
         flex-direction: column;
-        width:600px;
+        width:800px;
         position: relative;
         align-items: center;
         justify-content: center;
-        background-image: url('./IMG/right.jpg');
+        background-image: url('../IMG/graspingpower.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        color: greenyellow;
     }

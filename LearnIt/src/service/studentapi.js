@@ -1,10 +1,25 @@
-import axios from "axios";
+
 const url = "http://localhost:8000"
-export const addUser = async(data)=>{
+export const login = async(credentials)=>{
     try {
-        console.log("made request");
-     let res =    await axios.get(`${url}/addUser`);
-     return res.data;
+
+        const response = await fetch(`http://localhost:8000/login`, {
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json",
+             
+            },
+            body: JSON.stringify(
+
+              { email: credentials.email, password: credentials.password}
+      
+              )
+          });
+
+          return response;
+       
+
+
     } catch (error) {
         console.log("error while adduser",error.message);
     }

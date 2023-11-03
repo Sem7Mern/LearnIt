@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+
 
 export default function MainScreen() {
   return (
@@ -12,16 +12,16 @@ export default function MainScreen() {
         
 
           <Link to='/performance' >
-            <Button >Performance</Button>
+            <div className='btn btn-primary' >Performance</div>
 
           </Link>
 
           <Link to='/Attendence'>
-            <Button >Attendence</Button>
+            <div className='btn btn-primary' >Attendence</div>
           </Link>
 
           <Link to='/Feedback'>
-            <Button >Feedback</Button>
+            <div className='btn btn-primary'>Feedback</div>
 
           </Link>
         

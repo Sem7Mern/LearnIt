@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
+
 
 // import './Main.css';
 // import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -15,17 +15,20 @@ export default function Main() {
       
       {/*<---------------------------- Class Allotted section-----------------------> */}
 
-<Link to='/Classes'>
-            <Button >Class Allotted</Button>   </Link>
-            
+
+<Link to='/Class_alloted'>
+            <div className='btn btn-primary' >Class Allotted</div>   </Link>
+            <Link to='/Classes'>
+            <div className='btn btn-primary' >Class Allotted</div>   </Link>
+
             <Link to='/Performance'>
-            <Button >Performance</Button>   </Link>
+            <div className='btn btn-primary' >Performance</div>   </Link>
 
             <Link to='/Subject_Selection'>
-            <Button >Subject_Selection</Button>   </Link>
+            <div className='btn btn-primary' >Subject_Selection</div>   </Link>
 
             <Link to='/Student_List'>
-            <Button >Student_List</Button>   </Link>
+            <div className='btn btn-primary' >Student_List</div>   </Link>
    
     
 

@@ -17,7 +17,7 @@
     background-size: cover;
     background-position: center center;
     border: 1px solid black;
-    background-image: url('https://img.freepik.com/premium-photo/paper-with-pen_34810-546.jpg');
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -32,7 +32,7 @@
 
     align-items: center;
     padding-left: 150px;
-    background-image: url('https://images.unsplash.com/photo-1421091242698-34f6ad7fc088?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1vdGl2YXRpb25hbHxlbnwwfHwwfHx8MA%3D%3D');
+    background-image: url('https://img.pikbest.com/back_our/bg/20200903/bg/1f567b0105221_397995.jpg!w700wp');
     background-repeat: no-repeat;
     background-size: cover;
     /* Ensure the background image covers the container */
@@ -53,9 +53,9 @@
 }
 
 .right button {
-    background-color: rgb(72, 154, 57);
+    background-color: rgb(179, 183, 202);
     /* Set the initial background color to red */
-    color: white;
+    color: black;
     border: none;
     padding: 10px 20px;
     text-align: center;

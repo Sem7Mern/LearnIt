@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom'; // Import useLocation and useNavigate
 import { login } from "../../service/studentapi";
 import './Form.css';
 
@@ -7,7 +7,7 @@ function Form() {
   const location = useLocation();
   const currentPath = location.pathname;
   const pathWithoutSlash = currentPath.substring(1);
-  let navigate = useNavigate();
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
@@ -28,7 +28,9 @@ function Form() {
 
     if (json.success) {
       localStorage.setItem("email", json.email);
-      navigate("/welcome");
+
+      // Pass email as state when navigating to the welcome page
+      navigate("/welcome", { state: { email: json.email } });
     }
   }
 

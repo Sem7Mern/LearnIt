@@ -15,6 +15,9 @@ import Student_List from './Components/Teacher/Student_List';
 import Subject_Selection from './Components/Teacher/Subject_Selection';
 import Class_alloted from './Components/Teacher/Class_alloted';
 import Welcome from './Components/Welcome/Welcome';
+import Instruction from './Components/Welcome/instructions.jsx';
+import DyTest from './Components/Welcome/Test/DyTestScreen.js';
+//import StudentProfile from './Components/Welcome/StudentProfile.jsx';
 import Classes from './Components/Teacher/Classes';
 import HomePage from './Components/Home.jsx';
 import TestScreen from './Components/Welcome/Test/TestScreen.js';
@@ -51,19 +54,21 @@ function App() {
           <Route exact path="/ParentLogin" element={<Form />} />
           <Route exact path="/TeacherLogin" element={<Form />} />
           <Route exact path="/Welcome" element={<Welcome />} />
+          <Route exact path="/instructions" element={<Instruction />} />
           <Route exact path="/TestScreen" element={<TestScreen />} />
+          <Route exact path="/DyTestScreen" element={<DyTest />} />
           <Route exact path="/CurrentScreen1" element={<CurrentScreen1 />} />
-          <Route exact path="/Social1" element={<Social1/>}/>
-          <Route exact path="/Math1" element={<Math1/>}/>
+          <Route exact path="/Social1" element={<Social1 />} />
+          <Route exact path="/Math1" element={<Math1 />} />
           <Route exact path="/Science1" element={<Science1 />} />
-          <Route exact path="/CurrentScreen2" element={<CurrentScreen2/>} />
-          <Route exact path="/Social2" element={<Social2/>}/>
-          <Route exact path="/Math2" element={<Math2/>}/>
+          <Route exact path="/CurrentScreen2" element={<CurrentScreen2 />} />
+          <Route exact path="/Social2" element={<Social2 />} />
+          <Route exact path="/Math2" element={<Math2 />} />
           <Route exact path="/Science2" element={<Science2 />} />
-          <Route exact path="/Socialp" element={<Socialp/>} />
-          <Route exact path="/Mathp" element={<Mathp/>}/>
-          <Route exact path="/Sciencep" element={<Sciencep/>}/>
-          <Route exact path="/test" element={<Test/>}/>
+          <Route exact path="/Socialp" element={<Socialp />} />
+          <Route exact path="/Mathp" element={<Mathp />} />
+          <Route exact path="/Sciencep" element={<Sciencep />} />
+          <Route exact path="/test" element={<Test />} />
 
           {/* <----------------- Teacher Section ------------> */}
 

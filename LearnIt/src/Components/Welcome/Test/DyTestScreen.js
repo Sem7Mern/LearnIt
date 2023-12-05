@@ -13,7 +13,7 @@ function DyTest() {
 
         <div className="test">
             <div className='tright' >
-                <h2 style={{ position: "absolute", top: "169px", fontSize: '25px', color: 'red', fontWeight: '900' }}>New content test</h2>
+                <h2 style={{ position: "absolute", top: "169px", fontSize: '25px', color: 'red', fontWeight: '900' }}>Dynamic Content Test</h2>
                 <h3 style={{ color: "green", fontWeight: '650', marginBottom: '20px' }}>Read below instructions carefully</h3>
                 <div style={{ justifyContent: 'left', fontWeight: '500' }}>
                     <ol className='instructions'>

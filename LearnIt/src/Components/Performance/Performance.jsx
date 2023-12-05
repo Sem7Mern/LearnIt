@@ -23,7 +23,7 @@ const Performance = () => {
   }
   const navigatetotest = () => {
 
-    navigate('/CurrentScreen2')
+    navigate('/DyTestScreen')
   }
   const loaddata = () => {
     setmarks(0);

@@ -1,38 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import './Welcome.css';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { getstudentdata } from "../../service/quizapi";
 
 function Welcome() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { state: { email } } = location; // Extract email from the location state
+  const [email, setemail] = useState(localStorage.getItem('email'))
+  const [cMark, setcMark] = useState(0);
+  const [marks, setmarks] = useState(0); const [Pmarks, setPmarks] = useState(0);
+  const [subject, setsubject] = useState({});
+  const [cMarks, setcMarks] = useState([]);
+  const [Amarks, setAmarks] = useState([]);
   const [studentInfo, setStudentInfo] = useState({
     name: '',
     class: '8th grade',
-    AverageMarks: "DYP Edcucation society",
+    School: "DYP Edcucation society",
+    AverageMarks: "",
   });
-
   useEffect(() => {
-    const fetchStudentInfo = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(`/api/studentInfo?email=${email}`);
-        const data = await response.json();
+        const email = localStorage.getItem("email");
+        const data = await getstudentdata(email);
 
-        console.log('Data received from the backend:', data); // Add this line for debugging
+        console.log(data[0])
+        setAmarks(data[0])
+        // Assuming these state-setting functions are defined in your component
+        setPmarks(data[0]);
+        setsubject(data[1]);
 
-        setStudentInfo({
-          name: data.name,
-          class: data.class,
-          AverageMarks: data.AverageMarks,
-        });
+        if (localStorage.getItem("Science") >= 0) {
+          let m = parseInt(localStorage.getItem("Science"));
+          setcMark(m);
+          setcMarks({ "Science": m });
+        } else if (localStorage.getItem("Maths") >= 0) {
+          let m = parseInt(localStorage.getItem("Maths"));
+          setcMark(m + cMark);
+          setcMarks({ "Maths": cMark });
+        } else if (localStorage.getItem("Social") >= 0) {
+          let m = parseInt(localStorage.getItem("Social"));
+          setcMark(m + cMark);
+          setcMarks({ "Social": cMark });
+        }
+
       } catch (error) {
-        console.error('Error fetching student information:', error);
+        console.error('Error fetching data:', error);
       }
     };
 
-    fetchStudentInfo();
-  }, [email]);
-
+    fetchData();
+  }, []);
   function viewPerformance() {
     navigate('/performance');
   }
@@ -55,8 +73,9 @@ function Welcome() {
           </div>
           <h3 style={{ fontSize: '18px', marginTop: "10px", marginBottom: "30px" }}>Your Personal info</h3>
           <p style={{ fontSize: '20px', color: "black" }}>Email: {email}</p>
-          <p style={{ fontSize: '20px', color: "black" }}>School Name: {studentInfo.AverageMarks}</p>
+          <p style={{ fontSize: '20px', color: "black" }}>School Name: {studentInfo.School}</p>
           <p style={{ fontSize: '20px', color: "black" }}>Class: {studentInfo.class}</p>
+          <p style={{ fontSize: '20px', color: "black" }}>Percentage: {Amarks}</p>
         </div>
         <div className='right' style={{ flex: '70%', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
           <button type="button" onClick={viewPerformance} className="btn btn-success" style={{ marginTop: '10px', marginBottom: "30px", marginRight: '180px' }}>Performance</button>
@@ -69,3 +88,4 @@ function Welcome() {
 }
 
 export default Welcome;
+

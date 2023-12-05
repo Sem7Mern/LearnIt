@@ -29,7 +29,7 @@ function Instruction() {
                 style={{
                     width: '60%',
                     height: '500px',
-                    background: 'aqua',
+                    background: 'white',
                     textAlign: 'center',
                     border: '2px solid black',
                     borderRadius: '20px',

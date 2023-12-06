@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { useLocation, useNavigate } from 'react-router-dom'; // Import useLocation and useNavigate
-=======
-import { useLocation, useNavigate } from 'react-router-dom';
->>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
 import { login } from "../../service/studentapi";
 import './Form.css';
 
@@ -11,11 +7,7 @@ function Form() {
   const location = useLocation();
   const currentPath = location.pathname;
   const pathWithoutSlash = currentPath.substring(1);
-<<<<<<< HEAD
   const navigate = useNavigate(); // Use useNavigate instead of useHistory
-=======
-  let navigate = useNavigate();
->>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
@@ -35,14 +27,10 @@ function Form() {
     const json = await a.json();
 
     if (json.success) {
-<<<<<<< HEAD
       localStorage.setItem("email", json.email);
 
       // Pass email as state when navigating to the welcome page
       navigate("/welcome", { state: { email: json.email } });
-=======
-      navigate("/welcome");
->>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
     }
   }
 

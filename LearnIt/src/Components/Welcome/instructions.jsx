@@ -13,7 +13,7 @@ function Instruction() {
             className="test"
             style={{
                 backgroundImage:
-                    "url('https://png.pngtree.com/thumb_back/fh260/back_our/20200731/ourmid/pngtree-taobao-tmall-buyers-shopping-instructions-background-material-png-image_379489.jpg')",
+                    "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhGsoYPMLs9wCwwRcPiFpYev3M1_8JFEGMeiY7EzwtSA&s')",
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center',

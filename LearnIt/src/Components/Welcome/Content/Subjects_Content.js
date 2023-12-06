@@ -6,10 +6,10 @@ import './Subject_cont.css';
 
 const Subjects_Content = () => {
   const buttonStyle = {
-    
 
- 
-    
+
+
+
     display: 'block',
     marginTop: '10px',
     padding: '15px', // Increased padding for better touch interaction
@@ -24,7 +24,7 @@ const Subjects_Content = () => {
   };
 
 
-  
+
   const containerStyle = {
     maxWidth: '600px',
     margin: '0 auto',
@@ -32,31 +32,31 @@ const Subjects_Content = () => {
     textAlign: 'center',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Add a box shadow to the container
     borderRadius: '10px', // Rounded corners for the container
-    
-   
+    border: "solid 2px black"
+
   };
 
   return (
     <div className='all'>
-    <div className='all-screen'>
-    <div style={containerStyle}>
-      <h2 style={{ marginBottom: '20px' }}>Subjects</h2>
-      <p style={{ fontSize: '16px', color: '#555' }}>Choose a Subject Below:</p>
+      <div className='all-screen' style={{ marginTop: '150px' }}>
+        <div style={containerStyle}>
+          <h2 style={{ marginBottom: '20px' }}>Subjects</h2>
+          <p style={{ fontSize: '16px', color: '#555' }}>Choose a Subject Below:</p>
 
-      {/* Buttons with redirect links */}
-      <Link to="/MathsVideo">
-        <button style={buttonStyle}>Maths</button>
-      </Link>
+          {/* Buttons with redirect links */}
+          <Link to="/MathsVideo">
+            <button style={buttonStyle}>Maths</button>
+          </Link>
 
-      <Link to="/ScienceVideo">
-        <button style={buttonStyle}>Science</button>
-      </Link>
+          <Link to="/ScienceVideo">
+            <button style={buttonStyle}>Science</button>
+          </Link>
 
-      <Link to="/SocialVideo">
-        <button style={buttonStyle}>Social Science</button>
-      </Link>
-    </div>
-    </div>
+          <Link to="/SocialVideo">
+            <button style={buttonStyle}>Social Science</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

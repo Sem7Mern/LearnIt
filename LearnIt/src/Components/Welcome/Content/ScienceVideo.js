@@ -15,18 +15,18 @@ const ScienceVideo = () => {
       description: 'Health and Diseases',
     },
     {
-        id: 3,
-        videoUrl: 'https://www.youtube.com/embed/S9BBqETkuIw?si=SCKMswH5fYacFf9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-        description: 'Force & Pressure ',
-      }, {
-        id: 4,
-        videoUrl: 'https://www.youtube.com/embed/bWVBfI0x4KM?si=VaPrFXrsHeXNRuov" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-        description: 'Current electricity and magnetism',
-      }, {
-        id: 5,
-        videoUrl: 'https://www.youtube.com/embed/2BAmb9NT2HU?si=e_rX65hDf1xmYHh5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-        description: 'Inside the Atom ',
-      },
+      id: 3,
+      videoUrl: 'https://www.youtube.com/embed/S9BBqETkuIw?si=SCKMswH5fYacFf9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: 'Force & Pressure ',
+    }, {
+      id: 4,
+      videoUrl: 'https://www.youtube.com/embed/bWVBfI0x4KM?si=VaPrFXrsHeXNRuov" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: 'Current electricity and magnetism',
+    }, {
+      id: 5,
+      videoUrl: 'https://www.youtube.com/embed/2BAmb9NT2HU?si=e_rX65hDf1xmYHh5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: 'Inside the Atom ',
+    },
     // Add more lessons as needed
   ];
 
@@ -36,7 +36,7 @@ const ScienceVideo = () => {
   // State to manage video playback
   const [isPlaying, setIsPlaying] = useState(false);
 
- 
+
 
   // Function to handle lesson selection
   const selectLesson = (lesson) => {
@@ -45,7 +45,7 @@ const ScienceVideo = () => {
   };
 
   return (
-   
+
     <div className="maths-video-container">
       <div className="lessons-container">
         <h2>Lessons</h2>
@@ -72,7 +72,7 @@ const ScienceVideo = () => {
             allowFullScreen
             className="video-player"
           />
-          
+
         </div>
         <div className="description-container">
           <h2>Description</h2>
@@ -80,7 +80,7 @@ const ScienceVideo = () => {
         </div>
       </div>
     </div>
-  
+
   );
 };
 

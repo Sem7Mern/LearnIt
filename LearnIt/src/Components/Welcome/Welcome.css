@@ -1,132 +1,61 @@
-<<<<<<< HEAD
-.welcome {
+/* Welcome.css */
+
+
+
+.welcome-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.left {
-    flex: 1;
-    height: 700px;
+.welcome {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.left-container,
+.right-upper,
+.right-lower {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Your existing button styles can be applied here */
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Welcome.css */
+
+.proimg {
+    display: flex;
+    align-items: center;
+}
+
+.this {
     display: flex;
     flex-direction: column;
-    /* Change to column layout */
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border: 1px solid black;
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABODcYhAAEl463hAAAAAElFTkSuQmCC');
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* To stack the text content vertically */
 }
 
-.right {
-    flex: 1;
-    /* Use flex property to control the width of left and right containers */
-    height: 700px;
-    position: relative;
-    display: flex;
-    justify-content: center;
+/* Welcome.css */
 
-    align-items: center;
-    padding-left: 150px;
-    background-image: url('https://img.pikbest.com/back_our/bg/20200903/bg/1f567b0105221_397995.jpg!w700wp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Ensure the background image covers the container */
-    background-position: center center;
-    border: 1px solid black;
-
-
-}
-
-.left h2 {
-    /* Separate styles for the heading */
-    margin: 0;
-    /* Remove default margin */
-    padding: 10px;
-    /* Add padding for spacing */
-    font-size: 24px;
-    /* Adjust the font size as needed */
-}
-
-.right button {
-    background-color: rgb(179, 183, 202);
-    /* Set the initial background color to red */
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 500;
-
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Add a transition for button hover effect */
-
-    &:hover {
-        background-color: #FF5733;
-        /* Change to a different color on hover */
-    }
-
-}
-
-.left button {
-    background-color: rgb(72, 154, 57);
+.btn-light:hover {
+    background-color: #ffa500;
+    /* Orange color */
     color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    /* Add a transition for button hover effect */
-
-    &:hover {
-        background-color: #FF5733;
-        /* Change to a different color on hover */
-    }
+    /* Text color on hover */
 }
-=======
-.welcome{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
-    .left{
-        /* display: block; */
-        display: flex;
-    height: 300px;
-    width:700px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background-image: url('./IMG/success.png');
-    background-repeat: no-repeat;
-    }
-    
-    .right{
-        /* display: inline; */
-        display: flex;
-        height: 500px;
-        flex-direction: column;
-        width:800px;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        background-image: url('./IMG/right.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
->>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
+
+
+/* ... (existing styles) */

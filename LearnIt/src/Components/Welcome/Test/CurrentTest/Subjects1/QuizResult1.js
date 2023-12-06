@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Performance from "../../../../Performance/Performance";
 
 import { useNavigate } from 'react-router-dom';
@@ -11,35 +10,35 @@ function QuizResult1(props) {
 
 
 
-  const [Cmarks, setCmarks] = useState({"Science":0});
- const [performance, setPerformance] = useState(true);
- const navigate = useNavigate();
- const showPerformance = () => {
-  const currentPath = window.location.pathname;
-  console.log(currentPath);
+  const [Cmarks, setCmarks] = useState({ "Science": 0 });
+  const [performance, setPerformance] = useState(true);
+  const navigate = useNavigate();
+  const showPerformance = () => {
+    const currentPath = window.location.pathname;
+    console.log(currentPath);
     if (currentPath == "/Science1") {
-      localStorage.setItem("Science",props.score)
-     
+      localStorage.setItem("Science", props.score)
+
     } else if (currentPath == "/Math1") {
-      localStorage.setItem("Maths",props.score)
+      localStorage.setItem("Maths", props.score)
     } else if (currentPath == "/Social1") {
-      localStorage.setItem("Social",props.score)
+      localStorage.setItem("Social", props.score)
     }
-navigate("/performance")
+    navigate("/performance")
   }
 
   // return (
-    // <>
-    //   {performance ? (
-    //     <>
-    //     <div className='show-score'>
-    //       Your Score: {props.score}<br />
-    //       Total Score: {props.totalScore}
-    //     </div>
-    //   <button id="next-button" onClick={showPerformance}>Show Performance</button></>
-    //       ) : (<Performance cMarks = {Cmarks}/>
-    //   )}
-    // </>
+  // <>
+  //   {performance ? (
+  //     <>
+  //     <div className='show-score'>
+  //       Your Score: {props.score}<br />
+  //       Total Score: {props.totalScore}
+  //     </div>
+  //   <button id="next-button" onClick={showPerformance}>Show Performance</button></>
+  //       ) : (<Performance cMarks = {Cmarks}/>
+  //   )}
+  // </>
 
 
   // performance ?(<> <div className='show-score'>
@@ -47,35 +46,18 @@ navigate("/performance")
   //         Total Score: {props.totalScore}
   //      </div>
   //      <button id="next-button" onClick={showPerformance}>Show Performance</button></>):(<div  className="pfc"><Performance cMarks = {Cmarks}/></div>)
-   
+
   // );
 
 
-    return (<> <div className='show-score'>
-        Your Score: {props.score}<br />
-           Total Score: {props.totalScore}
-         </div>
-        <button id="next-button" onClick={showPerformance}>Show Performance</button></>);
-    
-  
- 
+  return (<> <div className='show-score'>
+    Your Score: {props.score}<br />
+    Total Score: {props.totalScore}
+  </div>
+    <button id="next-button" onClick={showPerformance}>Show Performance</button></>);
+
+
+
 }
 
 export default QuizResult1;
-=======
-import React from 'react'
-
-function QuizResult1(props) {
-  return (
-    <>
-    <div className='show-score'>
-        Your Score:{props.score}<br/>
-        Total Score:{props.totalScore}
-    </div>
-    <button id="next-button" onClick={props.tryAgain}>Try Again</button>
-    </>
-  )
-}
-
-export default QuizResult1;
->>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019

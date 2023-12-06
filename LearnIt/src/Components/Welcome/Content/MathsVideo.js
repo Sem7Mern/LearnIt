@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MathsVideo.css';
+import { Navigate } from 'react-router-dom';
 
 const MathsVideo = () => {
   // Sample videos and descriptions for each lesson
@@ -43,43 +44,43 @@ const MathsVideo = () => {
     setSelectedLesson(lesson);
     setIsPlaying(false); // Pause video when switching lessons
   };
-
   return (
-    
-      <div className="maths-video-container">
-        <div className="lessons-container">
-          <h2>Lessons</h2>
-          <div className="lesson-buttons-container">
-            {lessons.map((lesson) => (
-              <button
-                key={lesson.id}
-                onClick={() => selectLesson(lesson)}
-                className={lesson.id === selectedLesson.id ? 'active' : ''}
-              >
-                Lesson {lesson.id}
-              </button>
-            ))}
-          </div>
-        </div>
-        <div className="video-description-container">
-          <div className="video-container">
-            <iframe
-              title={`Lesson ${selectedLesson.id}`}
-              width="560"
-              height="315"
-              src={selectedLesson.videoUrl}
-              frameBorder="0"
-              allowFullScreen
-              className="video-player"
-            />
-          </div>
-          <div className="description-container">
-            <h2>Description</h2>
-            <p>{selectedLesson.description}</p>
-          </div>
+
+    <div className="maths-video-container">
+      <div className="lessons-container">
+        <h2>Lessons</h2>
+        <div className="lesson-buttons-container">
+          {lessons.map((lesson) => (
+            <button
+              key={lesson.id}
+              onClick={() => selectLesson(lesson)}
+              className={lesson.id === selectedLesson.id ? 'active' : ''}
+            >
+              Lesson {lesson.id}
+            </button>
+          ))}
+
         </div>
       </div>
-    
+      <div className="video-description-container">
+        <div className="video-container">
+          <iframe
+            title={`Lesson ${selectedLesson.id}`}
+            width="560"
+            height="315"
+            src={selectedLesson.videoUrl}
+            frameBorder="0"
+            allowFullScreen
+            className="video-player"
+          />
+        </div>
+        <div className="description-container">
+          <h2>Description</h2>
+          <p>{selectedLesson.description}</p>
+        </div>
+      </div>
+    </div>
+
   );
 };
 

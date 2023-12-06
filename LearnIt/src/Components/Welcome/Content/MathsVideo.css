@@ -1,0 +1,77 @@
+/* Add this CSS to your stylesheets or use a CSS-in-JS solution */
+
+.all-screen{
+  background-image: url('./img1.jpg');
+}
+.maths-video-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 10px auto;
+    padding-top: 20px;
+    /* background-image: url('./img1.jpg');
+      */
+  
+  }
+  
+  .lessons-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+  
+  .lesson-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .lesson-buttons-container button {
+    width: 300px;
+}
+
+  .lesson-buttons-container button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: rgb(28, 223, 223);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .lesson-buttons-container button:hover {
+    background-color: rgba(59, 118, 244, 0.393);
+  }
+  
+  .lesson-buttons-container button.active {
+    background-color: #2f7fe1;
+  }
+  
+  .video-description-container {
+    width: 65%;
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  
+  .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .description-container {
+    margin-top: 20px;
+  }
+  
+  /* Add any additional styling as needed */
+  

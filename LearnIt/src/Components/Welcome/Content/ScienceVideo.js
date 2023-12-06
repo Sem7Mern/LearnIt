@@ -5,27 +5,27 @@ const ScienceVideo = () => {
   const lessons = [
     {
       id: 1,
-      videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-      description: 'Description for Lesson 1.',
+      videoUrl: 'https://www.youtube.com/embed/U35-jiwp_tU?si=AjjEB9Q7_CUtlu1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: 'Crop Production And Management',
     },
     {
       id: 2,
-      videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
+      videoUrl: 'https://www.youtube.com/embed/MBNpEMlcxcQ?si=X3MUKMadZPkeOHgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
 
-      description: 'Description for Lesson 2.',
+      description: 'Health and Diseases',
     },
     {
         id: 3,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 3.',
+        videoUrl: 'https://www.youtube.com/embed/S9BBqETkuIw?si=SCKMswH5fYacFf9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        description: 'Force & Pressure ',
       }, {
         id: 4,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 4.',
+        videoUrl: 'https://www.youtube.com/embed/bWVBfI0x4KM?si=VaPrFXrsHeXNRuov" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        description: 'Current electricity and magnetism',
       }, {
         id: 5,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 5.',
+        videoUrl: 'https://www.youtube.com/embed/2BAmb9NT2HU?si=e_rX65hDf1xmYHh5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        description: 'Inside the Atom ',
       },
     // Add more lessons as needed
   ];
@@ -45,7 +45,7 @@ const ScienceVideo = () => {
   };
 
   return (
-    <div className='all-screen'>
+   
     <div className="maths-video-container">
       <div className="lessons-container">
         <h2>Lessons</h2>
@@ -80,7 +80,7 @@ const ScienceVideo = () => {
         </div>
       </div>
     </div>
-    </div>
+  
   );
 };
 

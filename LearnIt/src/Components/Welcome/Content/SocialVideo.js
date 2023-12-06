@@ -5,27 +5,29 @@ const SocialVideo = () => {
   const lessons = [
     {
       id: 1,
-      videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-      description: 'Description for Lesson 1.',
+      videoUrl: 'https://www.youtube.com/embed/86tBrwPGEdU?si=6rbe_427qjizLdVR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: ' Sources of History ',
+      
     },
     {
       id: 2,
-      videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
+      videoUrl: 'https://www.youtube.com/embed/X3vbp_8ReHI?si=3bKCHbhOzx-gFJ3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
 
-      description: 'Description for Lesson 2.',
+      description: ' Europe & India',
     },
     {
         id: 3,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 3.',
+        videoUrl: 'https://www.youtube.com/embed/nD7CSDxzK7I?si=ZvhwZ0pI39jhUDrx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      description: 'Social and Religious Reforms',
+       
       }, {
         id: 4,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 4.',
+        videoUrl: 'https://www.youtube.com/embed/b5Wkb0boQTo?si=0IlWk9ZrTXugfd83" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        description: 'Structure of Ocean Floor ',
       }, {
         id: 5,
-        videoUrl: 'https://www.youtube.com/embed/WnU0lH6C0EA',
-        description: 'Description for Lesson 5.',
+        videoUrl: 'https://www.youtube.com/embed/nD7CSDxzK7I?si=g2rWXD51Tl65geqF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+        description: 'Social and Religious Reforms',
       },
     // Add more lessons as needed
   ];
@@ -45,7 +47,7 @@ const SocialVideo = () => {
   };
 
   return (
-    <div className='all-screen'>
+    
     <div className="maths-video-container">
       <div className="lessons-container">
         <h2>Lessons</h2>
@@ -80,7 +82,7 @@ const SocialVideo = () => {
         </div>
       </div>
     </div>
-    </div>
+    
   );
 };
 

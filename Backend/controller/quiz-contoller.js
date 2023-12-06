@@ -1,5 +1,9 @@
 import User from "../model/user.js";
+<<<<<<< HEAD
 import StudentDomain from "../model/StudentDomain.js";
+=======
+
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
 export const quiz = async (req, res) => {
     try {
 
@@ -18,6 +22,7 @@ export const quiz = async (req, res) => {
         return res.status(500).json(error);
     }
 };
+<<<<<<< HEAD
 export const studentdata = async (req, res) => {
     try {
 
@@ -145,3 +150,5 @@ export const Usubjects = async (req, res) => {
         return res.status(500).json(error);
     }
 };
+=======
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019

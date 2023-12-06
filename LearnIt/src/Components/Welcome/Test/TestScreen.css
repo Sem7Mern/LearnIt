@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Test.css */
 
 /* Common styles for both sections */
@@ -160,3 +161,39 @@
     left: 0;
     top: 4px;
 }
+=======
+.test{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    }
+    .tleft{
+        /* display: block; */
+        display: flex;
+    height: 300px;
+    width:800px;
+    position: relative;
+    top: 50px;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../IMG/Teachingfea.png');
+   background-size: cover;
+    background-repeat: no-repeat;
+    }
+    
+    .tright{
+        /* display: inline; */
+        display: flex;
+        height: 500px;
+        flex-direction: column;
+        width:800px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../IMG/graspingpower.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        color: greenyellow;
+    }
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019

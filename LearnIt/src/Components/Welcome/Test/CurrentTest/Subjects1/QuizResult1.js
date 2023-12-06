@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import {  useParams } from 'react-router-dom';
 import Performance from "../../../../Performance/Performance";
@@ -61,3 +62,20 @@ navigate("/performance")
 }
 
 export default QuizResult1;
+=======
+import React from 'react'
+
+function QuizResult1(props) {
+  return (
+    <>
+    <div className='show-score'>
+        Your Score:{props.score}<br/>
+        Total Score:{props.totalScore}
+    </div>
+    <button id="next-button" onClick={props.tryAgain}>Try Again</button>
+    </>
+  )
+}
+
+export default QuizResult1;
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019

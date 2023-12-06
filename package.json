@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "@types/react-dnd": "^3.0.2",
     "@types/react-dnd-html5-backend": "^3.0.2",
     "cors": "^2.8.5",
@@ -7,6 +8,8 @@
     "mongoose": "^8.0.2",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
+=======
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
     "react-select": "^5.7.7"
   }
 }

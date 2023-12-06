@@ -1,4 +1,5 @@
 .chart-container{
+<<<<<<< HEAD
     position: relative;
     display: flex;
     align-items: center;
@@ -24,4 +25,13 @@ margin-left: 422px;
   justify-content: center;
   gap: 50px;
   margin-bottom: 30px;
+=======
+    display: flex;
+    align-items: center;
+  
+    width: 500px;
+    height: 800px;
+    position: relative;
+    justify-content: space-between;
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
 }

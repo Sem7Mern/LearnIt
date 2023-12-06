@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import './Welcome.css';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -94,3 +95,34 @@ function Welcome() {
 
 export default Welcome;
 
+=======
+import React from 'react'
+import './Welcome.css'
+import { useNavigate } from 'react-router-dom';
+function Welcome() {
+    const navigate = useNavigate();
+  function viewPerformance(){
+    navigate('/performance')
+  }
+  function GiveTest(){
+    navigate('/TestScreen')
+  }
+    return (
+    <>
+    <div className='welcome'>
+        <div className='left'>
+
+    <button type="button" onClick= { viewPerformance} class="btn btn-success">View Performance</button>
+        </div>
+<div className='right'>
+<button type="button" class="btn btn-success" style={{margin: "10px"}}>Profile</button>
+<button type="button" onClick={GiveTest} class="btn btn-success" style={{margin: "10px"}}>Give Test</button>
+<button type="button" class="btn btn-success" style={{margin: "10px"}}>Provided Material</button>
+</div>
+    </div>
+    </>
+  )
+}
+
+export default Welcome
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import Chart from "chart.js/auto";
@@ -6,10 +7,17 @@ import axios from "axios";
 import { getstudentdata } from "../../service/quizapi";
 const Performance = () => {
 
+=======
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
+import './Performance.css'
+const Performance = () => {
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
   const chartRef1 = useRef(null);
   const chartRef2 = useRef(null);
   const chartInstance1 = useRef(null);
   const chartInstance2 = useRef(null);
+<<<<<<< HEAD
   const [Pmarks, setPmarks] = useState(0);
   const [subject, setsubject] = useState({});
   const [performance, setperformance] = useState("");
@@ -72,6 +80,10 @@ const Performance = () => {
       setperformance("Advance Learner");
     }
 
+=======
+
+  useEffect(() => {
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
     if (chartInstance1.current) {
       chartInstance1.current.destroy();
     }
@@ -81,34 +93,57 @@ const Performance = () => {
 
     // Data for the first chart
     const data1 = {
+<<<<<<< HEAD
       labels: ["Science", "Maths", "English"],
       datasets: [
         {
           data: [subject["science"], subject["maths"], subject["english"]],
           backgroundColor: ["red", "blue", "green"],
+=======
+      labels: ['Science-A', 'Physics', 'Maths'],
+      datasets: [
+        {
+          data: [30, 50, 20],
+          backgroundColor: ['red', 'blue', 'green'],
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
         },
       ],
     };
 
     // Data for the second chart
     const data2 = {
+<<<<<<< HEAD
       labels: ["Science", "Maths", "Social"],
       datasets: [
         {
           data: [parseInt(localStorage.getItem("Science")), parseInt(localStorage.getItem("Maths")), parseInt(localStorage.getItem("Social"))],
           backgroundColor: ["orange", "purple", "pink"],
+=======
+        labels: ['Science-A', 'Physics', 'Maths'],
+      datasets: [
+        {
+          data: [10, 40, 50],
+          backgroundColor: ['orange', 'purple', 'pink'],
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
         },
       ],
     };
 
     // Chart 1
+<<<<<<< HEAD
     const ctx1 = chartRef1.current.getContext("2d");
     chartInstance1.current = new Chart(ctx1, {
       type: "pie",
+=======
+    const ctx1 = chartRef1.current.getContext('2d');
+    chartInstance1.current = new Chart(ctx1, {
+      type: 'pie',
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
       data: data1,
     });
 
     // Chart 2
+<<<<<<< HEAD
     const ctx2 = chartRef2.current.getContext("2d");
     chartInstance2.current = new Chart(ctx2, {
       type: "bar",
@@ -143,6 +178,21 @@ const Performance = () => {
 
         <div onClick={() => { navigatetotest() }} className="btn btn-primary">Give Your Next Test</div>
         <div onClick={() => { navigatetohome() }} className="btn btn-primary">Home Page</div>
+=======
+    const ctx2 = chartRef2.current.getContext('2d');
+    chartInstance2.current = new Chart(ctx2, {
+      type: 'bar',
+      data: data2,
+    });
+  }, []);
+
+  return (
+    <div>
+      <h2>Test Performance</h2>
+      <div className="chart-container">
+        <canvas style={{border:"2px solid black", margin:"10px"}} ref={chartRef1} ></canvas>
+        <canvas style={{border:"2px solid black"}} ref={chartRef2}></canvas>
+>>>>>>> 31e1b321e0ffc62a7504815928a7902780c6c019
       </div>
     </div>
   );

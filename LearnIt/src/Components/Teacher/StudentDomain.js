@@ -41,50 +41,6 @@ const StudentDomainSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    CMarks: {
-        hindi: {
-            type: Number,
-         
-        },
-        english: {
-            type: Number,
-         
-        },
-        maths: {
-            type: Number,
-          
-        },
-        science: {
-            type: Number,
-           
-        },
-        social: {
-            type: Number,
-        
-        },
-    },
-    DMarks: {
-        hindi: {
-            type: Number,
-           
-        },
-        english: {
-            type: Number,
-         
-        },
-        maths: {
-            type: Number,
-          
-        },
-        science: {
-            type: Number,
-          
-        },
-        social: {
-            type: Number,
-         
-        },
-    }
 });
 
 // model for the student data

@@ -20,7 +20,7 @@ function QuizResult1(props) {
     if (currentPath == "/Science2") {
       postDynamicTestR(email , {science: props.score});
      
-    } else if (currentPath == "/Maths2") {
+    } else if (currentPath == "/Math2") {
       postDynamicTestR(email , {maths: props.score});
     } else if (currentPath == "/Social2") {
       postDynamicTestR(email , {social: props.score});

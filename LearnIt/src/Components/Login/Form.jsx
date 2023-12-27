@@ -29,6 +29,10 @@ function Form() {
     if (json.success) {
       localStorage.setItem("email", json.email);
       navigate("/welcome");
+
+
+
+      
     }
   }
 

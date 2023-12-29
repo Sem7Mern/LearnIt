@@ -3,7 +3,7 @@ const url = "http://localhost:8000"
 export const plogin = async(credentials)=>{
     try {
 
-        const response = await fetch(`http://localhost:8000/login`, {
+        const response = await fetch(`http://localhost:8000/plogin`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",
@@ -11,7 +11,7 @@ export const plogin = async(credentials)=>{
             },
             body: JSON.stringify(
 
-              { email: credentials.email, password: credentials.password}
+              { email: credentials.email, password: credentials.password,childname: credentials.childname}
       
               )
           });

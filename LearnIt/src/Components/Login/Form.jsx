@@ -41,12 +41,13 @@ if(pathWithoutSlash === "studentLogin")
 }
 else{
   if (pathWithoutSlash === "parentLogin") {
+    console.log(credentials);
     a = await plogin(credentials);
     const json = await a.json();
 
     if (json.success) {
       localStorage.setItem("email", json.email);
-      navigate("/welcome");
+      navigate("/mainscreen");
 
 
 
@@ -89,6 +90,11 @@ else{
             <label htmlFor="exampleInputPassword1">Password</label>
             <input type="password" name="password" className="form-control" onChange={onChange} id="exampleInputPassword1" />
           </div>
+          {currentPath === "/parentLogin"?   <div className="form-group">
+            <label htmlFor="exampleInputPassword1">Child name</label>
+            <input type="text" name="childname" className="form-control" onChange={onChange} id="exampleInputPassword1" />
+          </div>:null}
+       
 
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>

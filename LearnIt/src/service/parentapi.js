@@ -1,6 +1,6 @@
 
 const url = "http://localhost:8000"
-export const slogin = async(credentials)=>{
+export const plogin = async(credentials)=>{
     try {
 
         const response = await fetch(`http://localhost:8000/login`, {

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'; // Import useLocation and useNavigate
-import { login } from "../../service/studentapi";
+import { slogin } from "../../service/studentapi";
+import { plogin } from "../../service/parentapi";
+import { tlogin } from "../../service/teacherapi";
 import './Form.css';
 
 function Form() {
@@ -17,13 +19,29 @@ function Form() {
 
   const handleClick = async (e) => {
     e.preventDefault();
-
+    let a ;
     if (!credentials.email || !credentials.password) {
       setError("Please fill out both email and password!");
       return;
     }
+if(pathWithoutSlash === "studentLogin")
+{
+ a = await slogin(credentials);
+ const json = await a.json();
 
-    const a = await login(credentials);
+ if (json.success) {
+   localStorage.setItem("email", json.email);
+   navigate("/welcome");
+
+
+
+   
+ }
+
+}
+else{
+  if (pathWithoutSlash === "parentLogin") {
+    a = await plogin(credentials);
     const json = await a.json();
 
     if (json.success) {
@@ -34,6 +52,27 @@ function Form() {
 
       
     }
+  }
+  else{
+    if (pathWithoutSlash === "teacherLogin") {
+      
+      a = await tlogin(credentials)
+      const json = await a.json();
+
+      if (json.success) {
+        localStorage.setItem("email", json.email);
+        navigate("/main");
+  
+  
+  
+        
+      }
+    }
+
+  }
+}
+
+   
   }
 
   return (

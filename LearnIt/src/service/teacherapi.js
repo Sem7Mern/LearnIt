@@ -1,9 +1,10 @@
 
 const url = "http://localhost:8000"
-export const slogin = async(credentials)=>{
+export const tlogin = async(credentials)=>{
+    console.log("doing teacher login", credentials);
     try {
 
-        const response = await fetch(`http://localhost:8000/login`, {
+        const response = await fetch(`http://localhost:8000/tlogin`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",

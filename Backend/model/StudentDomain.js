@@ -88,7 +88,7 @@ const StudentDomainSchema = new mongoose.Schema({
 });
 
 // model for the student data
-const StudentDomain = mongoose.model("studentdomains", StudentDomainSchema);
+const StudentDomain = mongoose.model("studentdomain", StudentDomainSchema);
 
 export default StudentDomain;
 

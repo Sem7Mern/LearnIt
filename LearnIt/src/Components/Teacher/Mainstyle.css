@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .App {
+    display: flex;
+    /* width: 30%; */
+    justify-content: space-between;
+    /* background-color: white; Set background color to white for the whole page */
+  }
+  
+  .left-nav {
+    width: 20%;
+    color: #9c88883d;
+    padding: 20px;
+  }
+  
+  .left-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .left-nav li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-nav i {
+    margin-right: 10px;
+    /* background-color: rgb(159, 10, 69); Change background color to blue on hover */
+  }
+  
+  .left-nav li:hover {
+    color: grey;
+    background-color: rgb(28, 18, 171); /*Change background color to blue on hover */
+  }
+  
+  .main-content {
+    width: 80%;
+    padding: 20px;
+    background-color: aliceblue;
+  }
+  
+  .welcome-msg {
+    background-color: white;
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Welcomebox {
+    color: black;
+    background-color: #0199ff5e;
+    border: rgb(119, 170, 228) 1px solid;
+  }
+  .welcome-msg img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .submitted-tests {
+    background-color: white;
+
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .right-sidebar {
+    width: 60%;
+    padding: 20px;
+    /* background-color: #fff; Set background color to white for the right sidebar */
+  }
+  
+  .calendar,
+  .timeline {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Add border to calendar and timeline boxes */
+  }
+  
+  .calendar table,
+  .timeline ul {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th,
+  .calendar td,
+  .timeline li {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Add these styles to Mainstyle.css */
+  
+  .class-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .class-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .class-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .class-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .class-dropdown li {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .class-btn:hover + .class-dropdown,
+  .class-dropdown:hover {
+    display: block;
+  }

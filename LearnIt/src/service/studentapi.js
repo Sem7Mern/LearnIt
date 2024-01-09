@@ -3,7 +3,7 @@ const url = "http://localhost:8000"
 export const slogin = async(credentials)=>{
     try {
 
-        const response = await fetch(`http://localhost:8000/login`, {
+        const response = await fetch(`http://localhost:8000/slogin`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",

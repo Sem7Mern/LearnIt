@@ -7,14 +7,17 @@ import { getstudentdata } from "../../service/quizapi";
 const Performance = () => {
   const chartRef1 = useRef(null);
   const chartRef2 = useRef(null);
+  const chartRef3 = useRef(null);
   const chartInstance1 = useRef(null);
   const chartInstance2 = useRef(null);
+  const chartInstance3 = useRef(null);
   const [academicMarks, setAcademicMarks] = useState([]);
   const [fresh, setFresh] = useState(false);
   const [currentMarks, setCurrentMarks] = useState([]);
   const [dynamicMarks, setDynamicMarks] = useState([]);
   const [academicSubjects, setAcademicSubjects] = useState([]);
   const [currentSubjects, setCurrentSubjects] = useState([]);
+  const [result, setResult] = useState();
   const [dynamicSubjects, setDynamicSubjects] = useState([]);
   const [performance, setPerformance] = useState("");
   const navigate = useNavigate();
@@ -78,6 +81,9 @@ const Performance = () => {
     if (chartInstance2.current) {
       chartInstance2.current.destroy();
     }
+    if (chartInstance3.current) {
+      chartInstance3.current.destroy();
+    }
 
     const data1 = {
       labels: currentSubjects,
@@ -94,7 +100,16 @@ const Performance = () => {
       datasets: [
         {
           data: dynamicMarks,
-          backgroundColor: ["orange", "purple", "pink"],
+          backgroundColor: ["red", "blue", "green"],
+        },
+      ],
+    };
+    const data3 = {
+      labels: academicSubjects,
+      datasets: [
+        {
+          data: academicMarks,
+          backgroundColor: ["red", "blue", "green"],
         },
       ],
     };
@@ -107,30 +122,40 @@ const Performance = () => {
 
     const ctx2 = chartRef2.current.getContext("2d");
     chartInstance2.current = new Chart(ctx2, {
-      type: "bar",
+      type: "pie",
       data: data2,
+    });
+    const ctx3 = chartRef3.current.getContext("2d");
+    chartInstance3.current = new Chart(ctx3, {
+      type: "pie",
+      data: data3,
     });
 if (academicMarks != undefined) {
   var Asum = academicMarks.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  
+  Asum  = Math.abs(Asum /500)*100;
   console.log("Sum of all academic marks:", Asum);
 }
 
 if(currentMarks !== undefined)
 {
   var Csum = currentMarks.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  Csum = Math.abs(Csum /10)*100;
   console.log("Sum of all current marks:", Csum);
-
+  
 }
 if (dynamicMarks !== undefined) {
   var Dsum = dynamicMarks.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  
+  Dsum = Math.abs(Dsum /10)*100;
   console.log("Sum of all dynamic marks:", Dsum);
   
 }
 if(Asum !== undefined && Csum !== undefined && Dsum !== undefined)
 {
   let total = Asum + Csum + Dsum;
-  total = Math.round(total / 10);
+  console.log("final total of 3 tests",total);
+  total = Math.abs(total /300 )*100;
+  setResult(total)
 if (total > 70 ) {
       setPerformance("Fast Learner");
     } else {
@@ -149,21 +174,41 @@ if (total > 70 ) {
     <div className="Performance">
       <h2>Test Performance</h2>
       <button onClick={loadData} className="btn btn-primary">Load Data</button>
-      <div className="chart-content">
-        <div>
-          <h1>Past Test Performance</h1>
-        </div>
+     
+
+      <div className="chart-content" style={{display:"flex", flexDirection:"column"}}>
         <div>
           <h1>Current Test Performance</h1>
+          <div className="chart-container" >
+        <canvas style={{ border: "3px solid black", margin: "10px", height: "100px", width: "200px" }} ref={chartRef1}></canvas>
+       
+      </div>
+        </div>
+        <div>
+          <h1>Dynamic Test Performance</h1>
+          <div className="chart-container" >
+       
+         <canvas style={{ border: "3px solid black", margin: "5px", height: "290px", width: "200px" }} ref={chartRef2}></canvas>
+       
+      </div>
+        </div>
+        <div>
+          <h1>Academic Performance</h1>
+          <div className="chart-container" >
+      
+        <canvas style={{ border: "3px solid black", margin: "5px", height: "290px", width: "200px" }} ref={chartRef3}></canvas>
+      </div>
         </div>
       </div>
-      <div className="chart-container">
+     
+      {/* <div className="chart-container" style>
         <canvas style={{ border: "3px solid black", margin: "10px", height: "100px", width: "200px" }} ref={chartRef1}></canvas>
         <canvas style={{ border: "3px solid black", margin: "5px", height: "290px", width: "200px" }} ref={chartRef2}></canvas>
-      </div>
+        <canvas style={{ border: "3px solid black", margin: "5px", height: "290px", width: "200px" }} ref={chartRef3}></canvas>
+      </div> */}
       <h1>Student Categorization</h1>
   {dynamicMarks?.length == 3 ?<><div className="category" style={{ justifyContent: "center" }}>
-        <div>Your Marks: {parseInt(academicMarks)}</div>
+        <div>Your Marks: {parseInt(result)}</div>
         <div>Here is your Category</div>
         <div>{performance}</div>
       </div></>:<><div>Give All Tests to View Your Category</div></>}  

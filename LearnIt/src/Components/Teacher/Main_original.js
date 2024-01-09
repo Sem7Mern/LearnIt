@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Mainstyle1.css'; // Make sure to import the same CSS file used in App.js
 import { type } from '@testing-library/user-event/dist/type';
-import DateCalendarViews from './DateCalendarViews';
-
-
-const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 function Main() {
   const [students, setStudents] = useState([]);
@@ -133,72 +129,24 @@ function Main() {
         </div>
       </div>
       <div className="right-sidebar">
-      <div className="calendar">
-          <h2>December 2023</h2>
+        <div className="calendar">
+          <h2>December 2021</h2>
           <table>
             <thead>
               <tr>
-                {daysOfWeek.map((day, index) => (
-                  <th key={index}>{day}</th>
-                ))}
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
               </tr>
             </thead>
             <tbody>
-              {/* Replace the following with logic to populate calendar dates */}
-              <tr>
-              
-                <td></td>
-                <td></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-             
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-
-              </tr>
-              <tr>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
-              
-
-              </tr>
-              {/* Continue adding rows for the remaining weeks */}
+              {/* Calendar content here */}
             </tbody>
           </table>
-        </div>
-        <div className="timeline">
-          {/* ... (Timeline content) */}
         </div>
         <div className="timeline">
           <h2>Timeline</h2>

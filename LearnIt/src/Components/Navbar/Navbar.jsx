@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css'
-
+import {Link,useLocation,useNavigate} from 'react-router-dom'
 const Navbar = () => {
+  let navigate = useNavigate();
+  let location = useLocation();
+  const handlelogout = ()=>{
+    localStorage.removeItem('email');
+    navigate('/login');
+
+  } 
+    
+    useEffect(() => {
+        console.log(location.pathname)
+      }, [location]);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light  ">
 
@@ -31,7 +42,7 @@ const Navbar = () => {
                 Link
               </a>
             </li> */}
-           {localStorage.getItem("email") === null? <li className="nav-item dropdown">
+           {!localStorage.getItem("email")? <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -60,10 +71,10 @@ const Navbar = () => {
                 </li>
                
               </ul>
-            </li>:null}
-            <li className="nav-item">
-            {localStorage.getItem("email") !== null?<a className="nav-link" style={{color:"white"}} onClick={localStorage.removeItem("email")}>Log out</a>:null} 
-            </li>
+            </li>: <li className="nav-item">
+             <a className="nav-link  " role='button'  style={{color:"white"}}  onClick={handlelogout}>Log out</a>
+            </li>}
+           
           </ul>
          
         </div>

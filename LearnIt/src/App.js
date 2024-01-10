@@ -44,9 +44,25 @@ import Sciencep from './Components/Welcome/Test/Untaught/Subjects2/Science2/Scie
 import MathsVideo from './Components/Welcome/Content/MathsVideo.js';
 import ScienceVideo from './Components/Welcome/Content/ScienceVideo.js';
 import SocialVideo from './Components/Welcome/Content/SocialVideo.js';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+
+const [flag, setflag] = useState(false);
+
+
+  useEffect(() => {
+    console.log("rendered");
+  if (localStorage.getItem("email")) {
+    setflag(true)
+  }
+  else{
+    setflag(false);
+  }
+  }, [])
+
   return (
 
     <div className="App">
@@ -58,7 +74,6 @@ function App() {
         {/* <----------------- Student Section ------------> */}
 
         <Routes>
-          
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/StudentLogin" element={<Form />} />
           <Route exact path="/ParentLogin" element={<Form />} />

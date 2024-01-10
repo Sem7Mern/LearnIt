@@ -31,7 +31,7 @@ const Navbar = () => {
                 Link
               </a>
             </li> */}
-            <li className="nav-item dropdown">
+           {localStorage.getItem("email") === null? <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -60,9 +60,9 @@ const Navbar = () => {
                 </li>
                
               </ul>
-            </li>
+            </li>:null}
             <li className="nav-item">
-              <a className="nav-link disabled" style={{color:"white"}}>Log out</a>
+            {localStorage.getItem("email") !== null?<a className="nav-link" style={{color:"white"}} onClick={localStorage.removeItem("email")}>Log out</a>:null} 
             </li>
           </ul>
          

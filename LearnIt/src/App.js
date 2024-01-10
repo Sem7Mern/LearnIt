@@ -54,10 +54,11 @@ function App() {
 
       <Router>
 
-        {/* <Navbar /> */}
+        <Navbar /> 
         {/* <----------------- Student Section ------------> */}
 
         <Routes>
+          
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/StudentLogin" element={<Form />} />
           <Route exact path="/ParentLogin" element={<Form />} />

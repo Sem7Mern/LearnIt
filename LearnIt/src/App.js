@@ -44,7 +44,11 @@ import Sciencep from './Components/Welcome/Test/Untaught/Subjects2/Science2/Scie
 import MathsVideo from './Components/Welcome/Content/MathsVideo.js';
 import ScienceVideo from './Components/Welcome/Content/ScienceVideo.js';
 import SocialVideo from './Components/Welcome/Content/SocialVideo.js';
-
+import Inbox from './Components/Teacher/notice.jsx';
+import Chatbot from './Components/Parent/Chatbot.jsx';
+import Category from './Components/Teacher/Category.jsx';
+import Makequiz from './Components/Teacher/Makequiz.jsx';
+import Takequiz from './Components/Teacher/Takequiz.jsx';
 
 function App() {
   return (
@@ -54,7 +58,7 @@ function App() {
 
       <Router>
 
-        {/* <Navbar /> */}
+        <Navbar />
         {/* <----------------- Student Section ------------> */}
 
         <Routes>
@@ -69,6 +73,7 @@ function App() {
           <Route exact path="/MathsVideo" element={<MathsVideo />} />
           <Route exact path="/ScienceVideo" element={< ScienceVideo />} />
           <Route exact path="/SocialVideo" element={<SocialVideo />} />
+          <Route exact path="/inbox" element={<Inbox />} />
 
 
 
@@ -82,18 +87,18 @@ function App() {
           <Route exact path="/TestScreen" element={<TestScreen />} />
           <Route exact path="/DyTestScreen" element={<DyTest />} />
           <Route exact path="/CurrentScreen1" element={<CurrentScreen1 />} />
-          <Route exact path="/Social1" element={<Social1/>}/>
-          <Route exact path="/Maths1" element={<Math1/>}/>
+          <Route exact path="/Social1" element={<Social1 />} />
+          <Route exact path="/Maths1" element={<Math1 />} />
           <Route exact path="/Science1" element={<Science1 />} />
           <Route exact path="/CurrentScreen2" element={<CurrentScreen2 />} />
           <Route exact path="/Social2" element={<Social2 />} />
           <Route exact path="/Math2" element={<Math2 />} />
           <Route exact path="/Science2" element={<Science2 />} />
-          <Route exact path="/Socialp" element={<Socialp/>} />
-          <Route exact path="/Mathsp" element={<Mathp/>}/>
-          <Route exact path="/Sciencep" element={<Sciencep/>}/>
-          <Route exact path="/test" element={<Test/>}/>
-<Route exact path = "/subjects" element = {<Subjects/>}/>
+          <Route exact path="/Socialp" element={<Socialp />} />
+          <Route exact path="/Mathsp" element={<Mathp />} />
+          <Route exact path="/Sciencep" element={<Sciencep />} />
+          <Route exact path="/test" element={<Test />} />
+          <Route exact path="/subjects" element={<Subjects />} />
           {/* <----------------- Teacher Section ------------> */}
 
           <Route exact path="/main" element={<Main />} />
@@ -101,6 +106,9 @@ function App() {
           <Route exact path="/class_alloted" element={<Class_alloted />} />
           <Route exact path="/Student_List" element={<Student_List />} />
           <Route exact path="/Subject_Selection" element={<Subject_Selection />} />
+          <Route exact path="/category" element={<Category />} />
+          <Route exact path="/makequiz" element={<Makequiz />} />
+          <Route exact path="/takequiz" element={<Takequiz />} />
 
 
           {/* <---------------Parent Section --------------> */}
@@ -108,6 +116,7 @@ function App() {
           <Route exact path="/performance" element={<Performance />} />
           <Route exact path="/attendence" element={<Attendence />} />
           <Route exact path="/feedback" element={<Feedback />} />
+          <Route exact path="/chatbot" element={<Chatbot />} />
         </Routes >
       </Router >
 

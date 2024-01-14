@@ -1,26 +1,27 @@
-import React from 'react'
-import './Welcome.css'
-import { useState, useEffect } from 'react'; // Add this line
-import { useNavigate, useLocation } from 'react-router-dom';
-import { getstudentdata } from "../../service/quizapi";
+import React from 'react';
+import './Welcome.css'; // Assuming you have your styles defined in Welcome.css
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getstudentdata } from '../../service/quizapi';
+
 function Welcome() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const [email, setemail] = useState(localStorage.getItem('email'))
+  const [email, setemail] = useState(localStorage.getItem('email'));
   const [Amarks, setAmarks] = useState([]);
   const [ctest, setctest] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [studentInfo, setStudentInfo] = useState({
     name: '',
     class: '8th grade',
-    School: "DYP Edcucation society",
-    AverageMarks: "",
+    School: 'DYP Education society',
+    AverageMarks: '',
   });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const email = localStorage.getItem("email");
+        const email = localStorage.getItem('email');
         const data = await getstudentdata(email);
 
         console.log(data);
@@ -39,7 +40,7 @@ function Welcome() {
 
         // Check if all three subjects have data
         const newCtest = hasMaths && hasScience && hasSocial;
-        console.log("newCtest:", newCtest);
+        console.log('newCtest:', newCtest);
 
         setctest(newCtest);
       } catch (error) {
@@ -57,69 +58,99 @@ function Welcome() {
   function GiveTest() {
     navigate('/instructions');
   }
+
   function Content() {
     navigate('/Subjects_Content');
   }
+  function Chatbot() {
+    navigate('/chatbot');
+  }
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   return (
     <>
-      <div className='welcome-container' style={{ backgroundImage: 'url("https://wallpapers.com/images/hd/profile-picture-background-t2h20vgsbbth5dxe.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className='welcome' style={{
-          display: 'grid', gridTemplateColumns: '50% 50%',
-        }}>
-          <div className='left'>
-            <div className='left-container' style={{ width: "500px", height: '620px', marginRight: "10px" }}>
-              <div style={{ backgroundImage: 'url("https://wallpapers.com/images/hd/profile-picture-background-t2h20vgsbbth5dxe.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', marginBottom: "30px" }}> <h2 style={{ color: "black" }}>Welcome to Your Profile Champ</h2></div>
-              <div className='proimg'>
-                <img
-                  src="https://i.pinimg.com/474x/76/4d/59/764d59d32f61f0f91dec8c442ab052c5.jpg"
-                  alt="Logo"
-                  style={{ width: '200px', height: 'auto', marginLeft: "120px" }}
-                />
-              </div>
-              <div className='this'>
-                <h4 style={{ color: "green", marginBottom: '30px' }}>Your Personal info</h4>
-                <p style={{ color: "black", marginBottom: "20px", fontSize: "20px" }}>Email: {email}</p>
-                <p style={{ color: "black", marginBottom: "20px", fontSize: "20px" }}>School Name: {studentInfo.School}</p>
-                <p style={{ color: "black", marginBottom: "20px", fontSize: "20px" }}>Class: {studentInfo.class}</p>
-                <p style={{ color: "black", marginBottom: "20px", fontSize: "20px" }}>Percentage: {Amarks}</p>
+      <div className={`wrapper ${sidebarOpen ? 'open' : ''}`}>
+        {/* Sidebar */}
+        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}
+          style={{ width: "350px" }}>
+          <nav id="sidebar">
+            <div className="sidebar-header" >
+              <button className="btn btn-light" onClick={toggleSidebar}>
+                ☰ Toggle Sidebar
+              </button>
+            </div>
+
+            <ul className="list-unstyled components">
+              <li>
+                <button type="button" className="btn btn-light btn-block" onClick={viewPerformance}>
+                  Performance
+                </button>
+              </li>
+              <li>
+                <button type="button" className="btn btn-light btn-block" onClick={GiveTest}>
+                  Give Test
+                </button>
+              </li>
+              <li>
+                <button type="button" className="btn btn-light btn-block" onClick={Content}>
+                  Content
+                </button>
+              </li>
+              <li>
+                <button type="button" className="btn btn-light btn-block" onClick={Chatbot}>
+                  Chatbot
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        {/* Page Content */}
+        <div className="right">
+          <div
+            className="this-container"
+            style={{
+              width: "1100px",
+              height: '900px',
+              marginRight: '10px',
+              marginLeft: '400px',
+              display: 'flex',
+              flexDirection: 'column'
+            }}
+          >
+            <div>
+              <h2 style={{ color: 'skyblue', marginTop: "200px", marginRight: '700px', fontSize: "70px" }}>Profile</h2>
+              <h6 style={{ color: 'grey', marginleft: "10px", marginRight: '630px' }}>check your profile information here</h6>
+            </div>
+            <div className="proimg">
+              <img
+                src={require('./profile1.jpeg')}
+                alt="Logo"
+                style={{ width: '350px', height: 'auto', marginLeft: '600px' }}
+              />
+            </div>
+
+            <div className="proinfo" style={{ marginLeft: '10px', marginRight: '400px', marginTop: '-500px', textAlign: 'left' }}>
+              <div style={{ width: "580px" }}>
+                <h2 style={{ color: 'red', marginBottom: '30px', marginRight: '300px', fontWeight: '150px' }}>About us:</h2>
+                <div style={{ marginLeft: "100px" }}>
+                  <p style={{ color: 'grey', marginBottom: '30px', fontSize: '15px' }}>
+                    "Empower learners with our specialized platform, identifying and supporting individuals with diverse learning paces. Our website offers personalized resources and tools to nurture and enhance the educational journey of slow learners, fostering a supportive and inclusive learning environment."</p>
+                  <h5 style={{ color: 'red', marginBottom: '10px', marginRight: '300px', fontWeight: '150px' }}>About you:</h5>
+                  <p style={{ color: 'black', marginBottom: '5px', fontSize: '15px' }}>I am a sincere and honest student</p>
+                  <p style={{ color: 'black', marginBottom: '5px', fontSize: '15px' }}> from {studentInfo.School}.</p>
+                  <p style={{ color: 'black', marginBottom: '20px', fontSize: '15px' }}>Currently studying in class {studentInfo.class}.</p>
+                </div>
+                <p style={{ color: 'red', marginBottom: '5px', fontSize: '15px', marginLeft: "100px" }}>Below is my Email Id:</p>
+                <p style={{ color: 'black', marginBottom: '5px', fontSize: '15px', marginLeft: "100px" }}>Email: {email}</p>
+                <p style={{ color: 'black', marginBottom: '5px', fontSize: '15px', marginLeft: "100px" }}>Your percentage:</p>
+                <p style={{ color: 'black', marginBottom: '5px', fontSize: '15px', marginLeft: "100px" }}>Percentage: {Amarks}</p>
               </div>
             </div>
-          </div>
-          <div className='right' style={{ marginLeft: '10px' }}>
 
-            <div className='right-upper' style={{ width: "550px", height: "300px" }}>
-              <div style={{ backgroundImage: 'url("https://wallpapers.com/images/hd/profile-picture-background-t2h20vgsbbth5dxe.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', marginBottom: "30px", height: "40px" }}> <h4 style={{ color: "black", marginTop: '10px' }}>Test Status</h4></div>
-              {ctest !== null ? (
-                ctest ? (
-                  <div style={{ marginTop: "80px" }}>
-                    <h5 style={{ color: "green", marginBottom: "20px" }}>
-                      You have successfully completed your first test.
-                    </h5>
-                    <p style={{ color: "red" }}>Current Test Status: true</p>
-                  </div>
-                ) : (
-                  <div style={{ marginTop: "80px" }}>
-                    <h5 style={{ color: "green" }}>
-                      You have to give your all tests.
-                    </h5>
 
-                    <p style={{ color: "red" }}>Dynamic Test Status: false</p>
-
-                    <button type="button" onClick={GiveTest} className="btn btn-success">Give Test</button>
-                  </div>
-                )
-              ) : (
-                <p>Loading...</p>
-              )}
-            </div>
-            <div className='right-lower' style={{ width: "550px", height: "300px", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div style={{ backgroundImage: 'url("https://wallpapers.com/images/hd/profile-picture-background-t2h20vgsbbth5dxe.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', height: "40px" }}>
-                <h4 style={{ color: 'black', width: "500px" }}>Select Your Tasks</h4>
-              </div>
-              <button type="button" onClick={viewPerformance} className="btn btn-light" style={{ marginTop: "20px", marginBottom: "20px", color: 'white', border: '1px solid #ccc' }}>Performance</button>
-              <button type="button" onClick={GiveTest} className="btn btn-light" style={{ marginBottom: "20px", color: 'white', border: '1px solid #ccc' }}>Give Test</button>
-              <button type="button" onClick={Content} className="btn btn-light" style={{ marginBottom: "20px", color: 'white', border: '1px solid #ccc' }}>Content</button>
-            </div>
           </div>
         </div>
       </div>
@@ -127,4 +158,6 @@ function Welcome() {
   );
 }
 
-export default Welcome
+export default Welcome;
+
+

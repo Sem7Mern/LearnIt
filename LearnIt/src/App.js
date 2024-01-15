@@ -46,6 +46,7 @@ import ScienceVideo from './Components/Welcome/Content/ScienceVideo.js';
 import SocialVideo from './Components/Welcome/Content/SocialVideo.js';
 
 
+
 function App() {
   return (
 
@@ -82,18 +83,18 @@ function App() {
           <Route exact path="/TestScreen" element={<TestScreen />} />
           <Route exact path="/DyTestScreen" element={<DyTest />} />
           <Route exact path="/CurrentScreen1" element={<CurrentScreen1 />} />
-          <Route exact path="/Social1" element={<Social1/>}/>
-          <Route exact path="/Maths1" element={<Math1/>}/>
+          <Route exact path="/Social1" element={<Social1 />} />
+          <Route exact path="/Maths1" element={<Math1 />} />
           <Route exact path="/Science1" element={<Science1 />} />
           <Route exact path="/CurrentScreen2" element={<CurrentScreen2 />} />
           <Route exact path="/Social2" element={<Social2 />} />
           <Route exact path="/Math2" element={<Math2 />} />
           <Route exact path="/Science2" element={<Science2 />} />
-          <Route exact path="/Socialp" element={<Socialp/>} />
-          <Route exact path="/Mathsp" element={<Mathp/>}/>
-          <Route exact path="/Sciencep" element={<Sciencep/>}/>
-          <Route exact path="/test" element={<Test/>}/>
-<Route exact path = "/subjects" element = {<Subjects/>}/>
+          <Route exact path="/Socialp" element={<Socialp />} />
+          <Route exact path="/Mathsp" element={<Mathp />} />
+          <Route exact path="/Sciencep" element={<Sciencep />} />
+          <Route exact path="/test" element={<Test />} />
+          <Route exact path="/subjects" element={<Subjects />} />
           {/* <----------------- Teacher Section ------------> */}
 
           <Route exact path="/main" element={<Main />} />

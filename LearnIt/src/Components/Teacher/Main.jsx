@@ -76,7 +76,7 @@ function Main() {
           <li>
             <i className="fas fa-book"></i>
             <span>
-              <Link to="#">logout</Link>
+              <Link to="#">Attendance</Link>
             </span>
           </li>
         </ul>

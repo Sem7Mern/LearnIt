@@ -5,8 +5,8 @@ const Navbar = () => {
   let navigate = useNavigate();
   let location = useLocation();
   const handlelogout = ()=>{
-    localStorage.removeItem('email');
-    navigate('/login');
+    localStorage.removeItem('email')
+ 
 
   } 
     
@@ -72,7 +72,7 @@ const Navbar = () => {
                
               </ul>
             </li>: <li className="nav-item">
-             <a className="nav-link  " role='button'  style={{color:"white"}}  onClick={handlelogout}>Log out</a>
+             <Link to="/" className="nav-link  " role='button'  style={{color:"white"}}  onClick={handlelogout}>Log out</Link>
             </li>}
            
           </ul>

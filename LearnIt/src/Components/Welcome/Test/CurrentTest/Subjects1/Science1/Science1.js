@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Sciencedata1 } from './Sciencedata1';
 import QuizResult from '../QuizResult1';
-import  '../Quiz1.css';
+// import  '../Quiz1.css';
 import {postcurrentTestR} from '../../../../../../service/quizapi'
 function Science1() {
     const [currentQuestion,setCurrentQuestion]=useState(0);

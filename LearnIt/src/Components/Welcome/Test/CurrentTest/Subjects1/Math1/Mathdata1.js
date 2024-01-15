@@ -1,3 +1,8 @@
+//   export const  Mathdata1 = ()=>{
+// fetch()
+// }
+
+
 export const Mathdata1 = [
 
         {

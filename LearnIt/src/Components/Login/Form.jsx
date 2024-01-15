@@ -78,7 +78,7 @@ else{
 
   return (
     <div className="login-container">
-      <span className="login-heading">{pathWithoutSlash} Login</span>
+      <span className="login-heading">{pathWithoutSlash}</span>
       <div className="form">
         <form onSubmit={handleClick}>
           <div className="form-group">

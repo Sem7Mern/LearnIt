@@ -17,7 +17,7 @@ import Class_alloted from './Components/Teacher/Class_alloted';
 import Welcome from './Components/Welcome/Welcome';
 import Instruction from './Components/Welcome/instructions.jsx';
 import Subjects_Content from './Components/Welcome/Content/Subjects_Content.js';
-
+import Profile from './Components/Teacher/profile.jsx';
 
 
 
@@ -134,6 +134,8 @@ const [flag, setflag] = useState(false);
           <Route exact path="/attendence" element={<Attendence />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/chatbot" element={<Chatbot />} />
+          <Route exact path="/studentprofile" element={<Profile />} />
+        
         </Routes >
       </Router >
 

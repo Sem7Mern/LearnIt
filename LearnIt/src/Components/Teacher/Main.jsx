@@ -137,7 +137,7 @@ function Main() {
               <tbody>
                 {students.map((student) => (
                   <tr key={student.name}>
-                    <td>{student.name}</td>
+                <a href="/studentprofile"> <td>{student.name}</td></a>
                     <td>{student.dateOfSubmission}</td>
                     {(typeof student.CMarks === 'object' && typeof student.DMarks === 'object') ? Object.keys(student?.CMarks)?.length === 3 && Object.keys(student?.DMarks)?.length === 3 ? <td>Completed</td> : <td>Pending</td> : <td>Pending</td>}
 

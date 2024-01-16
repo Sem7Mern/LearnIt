@@ -19,12 +19,11 @@ function Main() {
       try {
         // Replace 'your-api-endpoint-here' with your actual API endpoint
         console.log(selectedValue);
-        const response = await fetch("http://localhost:8000/slist", {
-          method: "POST",
-          headers: {
+        const response = await fetch('http://localhost:8000/slist', {
+          method: "POST", headers: {
             "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ class_: selectedValue.class_ }),
+
+          }, body: JSON.stringify({ class_: selectedValue.class_ })
         });
         const data = await response.json();
         console.log(data);
@@ -75,10 +74,21 @@ function Main() {
           </li> */}
           <li>
             <i className="fas fa-book"></i>
-            <span>
-              <Link to="#">Attendance</Link>
-            </span>
+            <span><Link to="/category">category</Link></span>
           </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <span><Link to="/makequiz">Make Quiz</Link></span>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <span><Link to="/takequiz">Take quiz</Link></span>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <span><Link to="#">logout</Link></span>
+          </li>
+
         </ul>
       </div>
       <div className="main-content">
@@ -90,18 +100,13 @@ function Main() {
             alt="teacher and student"
           /> */}
           <div className="Welcomebox">
-            <p>
-              Your students are doing great! 60% students have completed the
-              test.
-            </p>
+            <p>Your students are doing great! 60% students have completed the test.</p>
           </div>
         </div>
         <div className="submitted-tests">
           <h2>Submitted Tests</h2>
           <div className="form-group">
-            <label htmlFor="exampleFormControlSelect1">
-              Select your class:
-            </label>
+            <label htmlFor="exampleFormControlSelect1">Select your class:</label>
             <select
               className="form-control"
               id="exampleFormControlSelect1"
@@ -134,17 +139,8 @@ function Main() {
                   <tr key={student.name}>
                     <td>{student.name}</td>
                     <td>{student.dateOfSubmission}</td>
-                    {typeof student.CMarks === "object" &&
-                    typeof student.DMarks === "object" ? (
-                      Object.keys(student?.CMarks)?.length === 3 &&
-                      Object.keys(student?.DMarks)?.length === 3 ? (
-                        <td>Completed</td>
-                      ) : (
-                        <td>Pending</td>
-                      )
-                    ) : (
-                      <td>Pending</td>
-                    )}
+                    {(typeof student.CMarks === 'object' && typeof student.DMarks === 'object') ? Object.keys(student?.CMarks)?.length === 3 && Object.keys(student?.DMarks)?.length === 3 ? <td>Completed</td> : <td>Pending</td> : <td>Pending</td>}
+
                   </tr>
                 ))}
               </tbody>
@@ -207,6 +203,8 @@ function Main() {
                 <td>29</td>
                 <td>30</td>
                 <td>31</td>
+
+
               </tr>
               {/* Continue adding rows for the remaining weeks */}
             </tbody>

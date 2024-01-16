@@ -7,13 +7,11 @@ import { studentdata,cResult ,Usubjects,Dusubjects,dResult} from "../controller/
 import express from "express";
 const route = express.Router();
 
+// Your existing routes
 route.post('/slogin', slogin);
 route.post('/slist', slist);
-
-
 route.post('/tlogin', tlogin);
 route.post('/plogin', plogin);
-
 route.get('/quiz', quiz);
 route.get('/cscience',currentsciece)
 
@@ -23,4 +21,8 @@ route.put('/cResult', cResult);
 route.put('/dResult', dResult);
 route.post('/subjects', Usubjects);
 route.post('/dsubjects', Dusubjects);
+
+// New Notice routes
+//route.post('/addNotice', addNotice);
+
 export default route;

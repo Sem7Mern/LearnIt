@@ -14,26 +14,9 @@
     grid-template-columns: 50% 50%;
 }
 
-.left-container,
-.right-upper,
-.right-lower {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
+
 
 /* Your existing button styles can be applied here */
-.btn {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 /* Welcome.css */
 
@@ -51,7 +34,7 @@
 /* Welcome.css */
 
 .btn-light:hover {
-    background-color: #ffa500;
+    background-color: red;
     /* Orange color */
     color: white;
     /* Text color on hover */
@@ -59,3 +42,18 @@
 
 
 /* ... (existing styles) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    background-color: skyblue;
+    /* Set your desired background color */
+    padding: 15px;
+    /* Add padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow effect */
+    z-index: 1000;
+    /* Ensure the sidebar is above other elements */
+}

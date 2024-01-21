@@ -3,6 +3,7 @@ import { Mathdata1 } from './Mathdata1';
 import QuizResult from '../QuizResult1';
 import  '../Quiz1.css';
 import {postcurrentTestR} from '../../../../../../service/quizapi'
+import Clock from '../../../Clock/Clock';
 function Math1() {
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore] = useState(0);
@@ -15,7 +16,7 @@ function Math1() {
             setCurrentQuestion(currentQuestion+1);
             setClickedOption(0);
         }else{
-            setShowResult(true)
+             setShowResult(true)
              let email = localStorage.getItem("email")
              const cResult = {maths: score}
              postcurrentTestR(email , cResult);
@@ -33,6 +34,7 @@ function Math1() {
         setScore(0);
     }
   return (
+    <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
     <div>
         <p className="heading-txt">Math1 APP</p>
         <div className="container">
@@ -43,6 +45,7 @@ function Math1() {
             <div className="question">
                 <span id="question-number">{currentQuestion+1}. </span>
                 <span id="question-txt">{Mathdata1[currentQuestion].question}</span>
+                <Clock/>
             </div>
             <div className="option-container">
                 {Mathdata1[currentQuestion].options.map((option,i)=>{
@@ -64,6 +67,8 @@ function Math1() {
             <input type="button" value="Next" id="next-button" onClick={changeQuestion}/>
             </>)}
         </div>
+    </div>
+    <Clock/>
     </div>
   )
 }

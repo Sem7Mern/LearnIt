@@ -44,7 +44,7 @@
 /* ... (existing styles) */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 59px;
     left: 0;
     height: 100%;
 
@@ -56,4 +56,10 @@
     /* Optional: Add a shadow effect */
     z-index: 1000;
     /* Ensure the sidebar is above other elements */
+}
+
+.right{
+
+    position: relative;
+    top: -109px;
 }

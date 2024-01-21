@@ -75,13 +75,9 @@ function Welcome() {
       <div className={`wrapper ${sidebarOpen ? 'open' : ''}`}>
         {/* Sidebar */}
         <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}
-          style={{ width: "350px" }}>
+          style={{ width: "250px" }}>
           <nav id="sidebar">
-            <div className="sidebar-header" >
-              <button className="btn btn-light" onClick={toggleSidebar}>
-                ☰ Toggle Sidebar
-              </button>
-            </div>
+          
 
             <ul className="list-unstyled components">
               <li>

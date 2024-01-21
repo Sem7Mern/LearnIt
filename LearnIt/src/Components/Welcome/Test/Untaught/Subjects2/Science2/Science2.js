@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sciencedata2 } from './Sciencedata2';
 import QuizResult from '../QuizResult1';
 import '../Quiz1.css';
+import Clock from '../../../Clock/Clock';
 
 function Science2() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -33,6 +34,7 @@ function Science2() {
     };
 
     return (
+        <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
         <div>
             <p className="heading-txt">Science1 APP</p>
             <div className="container">
@@ -69,6 +71,9 @@ function Science2() {
                 )}
             </div>
         </div>
+        <Clock/>
+        </div>
+
     );
 }
 

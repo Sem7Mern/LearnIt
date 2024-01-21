@@ -3,6 +3,7 @@ import { Socialdata1 } from './Socialdata1';
 import QuizResult from '../QuizResult1';
 import  '../Quiz1.css';
 import {postcurrentTestR} from '../../../../../../service/quizapi'
+import Clock from '../../../Clock/Clock';
 function Social1() {
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore] = useState(0);
@@ -33,6 +34,7 @@ function Social1() {
         setScore(0);
     }
   return (
+    <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
     <div>
         <p className="heading-txt">Social1 APP</p>
         <div className="container">
@@ -64,6 +66,8 @@ function Social1() {
             <input type="button" value="Next" id="next-button" onClick={changeQuestion}/>
             </>)}
         </div>
+    </div>
+    <Clock/>
     </div>
   )
 }

@@ -14,7 +14,7 @@ const Navbar = () => {
         console.log(location.pathname)
       }, [location]);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light  ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light  " style={{position:"fixed", width:"100%"}}>
 
 
       <div className="container-fluid">

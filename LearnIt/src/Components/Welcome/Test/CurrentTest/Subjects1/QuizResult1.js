@@ -53,8 +53,10 @@ navigate("/subjects")
 
 
     return (<> <div className='show-score'>
-        Your Score: {props.score}<br />
-           Total Score: {props.totalScore}
+      <div>Result</div>
+     <div> {props.message}</div>
+     <div> Your Score: {props.score}</div>
+     <div>     Total Score: {props.totalScore}</div>
          </div>
         <button id="next-button" onClick={showPerformance}>Next Subject Test</button></>);
     

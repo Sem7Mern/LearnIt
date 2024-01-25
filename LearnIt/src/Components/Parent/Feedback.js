@@ -35,6 +35,7 @@ const Feedback = () => {
   
         
   return (
+  
     <div className="feedback">
         <h1>Parent Feedback Form</h1>
         <form onSubmit={handleSubmit}>
@@ -98,6 +99,7 @@ const Feedback = () => {
             <button type="submit">Submit Feedback</button>
         </form>
     </div>
+    
 );
                   };
 export  default Feedback;

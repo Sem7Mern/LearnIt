@@ -12,7 +12,7 @@ const GoogleForm = () => {
             {/* First Box */}
             <div style={{ background: "skyblue", width: '500px', height: '500px', border: '1px solid #ccc', padding: '20px', marginLeft: "120px", marginTop: "100px" }}>
                 <h2 style={{ paddingTop: "50px" }}>Create Your Google Form</h2>
-                <p style={{ paddingTop: "50px", paddingBottom: "30px" }}>Create your form on Google Forms and obtain the link.</p>
+                <p style={{ paddingTop: "50px", paddingBottom: "30px" }}>Create your form on Google Forms and obtain the link for quiz.</p>
                 <a
                     href="https://docs.google.com/forms/"
                     target="_blank"

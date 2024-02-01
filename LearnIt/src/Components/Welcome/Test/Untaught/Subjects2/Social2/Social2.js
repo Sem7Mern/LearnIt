@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Socialdata2 } from './Socialdata2';
 import QuizResult from '../QuizResult1';
 import '../Quiz1.css';
+import Clock from '../../../Clock/Clock';
 
 function Social2() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -33,6 +34,7 @@ function Social2() {
     };
 
     return (
+        <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
         <div>
             <p className="heading-txt">Social Test</p>
             <div className="container">
@@ -67,6 +69,8 @@ function Social2() {
                     </>
                 )}
             </div>
+        </div>
+        <Clock/>
         </div>
     );
 }

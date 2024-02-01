@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react'
 import { Sciencedata1 } from './Sciencedata1';
 import QuizResult from '../QuizResult1';
 // import  '../Quiz1.css';
 import {postcurrentTestR} from '../../../../../../service/quizapi'
+import Clock from '../../../Clock/Clock';
 function Science1() {
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore] = useState(0);
     const [clickedOption,setClickedOption]=useState(0);
     const [showResult,setShowResult]=useState(false);
-    
+    const [message, setmessage] = useState(null)
+
+
+
+     function handleChildDataChange(newChildData) {
+          setmessage(newChildData);
+          console.log(newChildData);
+        }
     const changeQuestion = ()=>{
         updateScore();
         if(currentQuestion< Sciencedata1.length-1){
@@ -33,16 +41,18 @@ function Science1() {
         setScore(0);
     }
   return (
-    <div>
+    <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
+    <div style={{display:'flex-center' }}>
         <p className="heading-txt">Science1 APP</p>
         <div className="container">
-            {showResult ? (
-                <QuizResult score={score} totalScore={Sciencedata1.length} tryAgain={resetAll}/>
+            {showResult || message === "Time is up!" ? (
+                <QuizResult message = {message} score={score} totalScore={Sciencedata1.length} tryAgain={resetAll}/>
             ):(
             <>
             <div className="question">
                 <span id="question-number">{currentQuestion+1}. </span>
                 <span id="question-txt">{Sciencedata1[currentQuestion].question}</span>
+              
             </div>
             <div className="option-container">
                 {Sciencedata1[currentQuestion].options.map((option,i)=>{
@@ -64,6 +74,10 @@ function Science1() {
             <input type="button" value="Next" id="next-button" onClick={changeQuestion}/>
             </>)}
         </div>
+      
+    </div>
+  {!showResult ? <Clock  onChildDataChange={handleChildDataChange} />:null} 
+  
     </div>
   )
 }

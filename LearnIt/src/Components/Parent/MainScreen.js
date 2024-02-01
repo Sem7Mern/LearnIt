@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-
+import "./mainScreen.css"
 
 export default function MainScreen() {
   return (

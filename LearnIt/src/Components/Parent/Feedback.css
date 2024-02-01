@@ -1,51 +1,56 @@
-.feedback-form {
-    max-width: 500px;
-    margin: 30px auto;
+.feedback {
+    margin-top: 50px; /* Adjust the value as needed */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    background-color: #f7f7f7;
-}
-
-h2 {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('https://img.freepik.com/free-photo/arrangement-with-different-expressions_23-2148857191.jpg?w=996&t=st=1703854652~exp=1703855252~hmac=4351053a72758d022453368ec198bf4884f975c2499a97c6a6b6578238b92d64');
+    background-size: cover;
+  }
+  
+  .field {
+    margin: 40px;
+  }
+  
+  .feedback h1 {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.input-group {
+    color: #333;
+  }
+  
+  .form-group {
     margin-bottom: 15px;
-}
-
-label {
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  label {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     font-weight: bold;
-}
-
-input[type="text"],
-select,
-textarea {
+  }
+  
+  select,
+  textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

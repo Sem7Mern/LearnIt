@@ -78,11 +78,15 @@ function Main() {
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <span><Link to="/makequiz">Make Quiz</Link></span>
+            <span><Link to="/makequiz">Make current Quiz</Link></span>
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <span><Link to="/takequiz">Take quiz</Link></span>
+            <span><Link to="/makedynamic">Make dynamic quiz</Link></span>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <span><Link to="/googleform">google-form quiz</Link></span>
           </li>
           <li>
             <i className="fas fa-book"></i>
@@ -137,7 +141,7 @@ function Main() {
               <tbody>
                 {students.map((student) => (
                   <tr key={student.name}>
-                <a href="/studentprofile"> <td>{student.name}</td></a>
+                    <a href="/studentprofile"> <td>{student.name}</td></a>
                     <td>{student.dateOfSubmission}</td>
                     {(typeof student.CMarks === 'object' && typeof student.DMarks === 'object') ? Object.keys(student?.CMarks)?.length === 3 && Object.keys(student?.DMarks)?.length === 3 ? <td>Completed</td> : <td>Pending</td> : <td>Pending</td>}
 

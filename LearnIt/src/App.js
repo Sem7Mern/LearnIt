@@ -49,23 +49,24 @@ import { useEffect, useState } from 'react';
 import Inbox from './Components/Teacher/notice.jsx';
 import Chatbot from './Components/Parent/Chatbot.jsx';
 import Category from './Components/Teacher/Category.jsx';
-import Makequiz from './Components/Teacher/Makequiz.jsx';
+import Makequiz from './Components/Teacher/Quiz/Makequiz.jsx';
 import Takequiz from './Components/Teacher/Takequiz.jsx';
-
+import MakeDynamic from './Components/Teacher/Quiz/MakeDynamic.jsx';
+import GoogleForm from './Components/Teacher/Quiz/GoogleForm.jsx';
 function App() {
 
 
-const [flag, setflag] = useState(false);
+  const [flag, setflag] = useState(false);
 
 
   useEffect(() => {
     console.log("rendered");
-  if (localStorage.getItem("email")) {
-    setflag(true)
-  }
-  else{
-    setflag(false);
-  }
+    if (localStorage.getItem("email")) {
+      setflag(true)
+    }
+    else {
+      setflag(false);
+    }
   }, [])
 
   return (
@@ -75,7 +76,7 @@ const [flag, setflag] = useState(false);
 
       <Router>
 
-        <Navbar /> 
+        <Navbar />
         {/* <----------------- Student Section ------------> */}
 
         <Routes>
@@ -126,6 +127,8 @@ const [flag, setflag] = useState(false);
           <Route exact path="/category" element={<Category />} />
           <Route exact path="/makequiz" element={<Makequiz />} />
           <Route exact path="/takequiz" element={<Takequiz />} />
+          <Route exact path="/makedynamic" element={<MakeDynamic />} />
+          <Route exact path="/googleform" element={<GoogleForm />} />
 
 
           {/* <---------------Parent Section --------------> */}
@@ -135,7 +138,7 @@ const [flag, setflag] = useState(false);
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/chatbot" element={<Chatbot />} />
           <Route exact path="/studentprofile" element={<Profile />} />
-        
+
         </Routes >
       </Router >
 

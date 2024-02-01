@@ -80,57 +80,138 @@ const FileUpload = ({ onFileUpload }) => {
                 </div>
             </div>
             <div className='lower'>
-                {uploadedData.length > 0 && (
-                    <div>
-                        <h3>Original Excel Data:</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    {uploadedData[0].map((cell, index) => (
-                                        <th key={index}>{cell}</th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {uploadedData.slice(1).map((row, rowIndex) => (
-                                    <tr key={rowIndex}>
-                                        {row.map((cell, cellIndex) => (
-                                            <td key={cellIndex}>{cell}</td>
+                <div className='lower-left'>
+                    {uploadedData.length > 0 && (
+                        <div>
+                            <h3>Original Excel Data:</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        {uploadedData[0].map((cell, index) => (
+                                            <th key={index}>{cell}</th>
                                         ))}
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                )}
-
-                {categorizedData.length > 0 && (
-                    <div>
-                        <h3>Categorized Data:</h3>
-                        <table border="1">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Marks</th>
-                                    <th>Category</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {categorizedData.map((student, index) => (
-                                    <tr key={index}>
-                                        <td>{student.name}</td>
-                                        <td>{student.marks !== null ? student.marks : 'N/A'}</td>
-                                        <td>{student.category}</td>
+                                </thead>
+                                <tbody>
+                                    {uploadedData.slice(1).map((row, rowIndex) => (
+                                        <tr key={rowIndex}>
+                                            {row.map((cell, cellIndex) => (
+                                                <td key={cellIndex}>{cell}</td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </div>
+                <div className='lower-right'>
+                    {categorizedData.length > 0 && (
+                        <div>
+                            <h3>Categorized Data:</h3>
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Marks</th>
+                                        <th>Category</th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {categorizedData.map((student, index) => (
+                                        <tr key={index}>
+                                            <td>{student.name}</td>
+                                            <td>{student.marks !== null ? student.marks : 'N/A'}</td>
+                                            <td>{student.category}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
 
-                )}
+                    )}
+                </div>
             </div>
         </div>
     );
 };
 
 export default FileUpload;
+
+
+// // FileUpload.js
+// import React, { useState } from 'react';
+// import { useDropzone } from 'react-dropzone';
+// import * as XLSX from 'xlsx';
+
+// const FileUpload = ({ onFileUpload }) => {
+//     const [uploadedData, setUploadedData] = useState([]);
+//     const [categorizedData, setCategorizedData] = useState([]);
+
+//     const onDrop = (acceptedFiles) => {
+//         // ... (same as your existing onDrop code)
+
+//         // Categorize data when the button is clicked
+//         const categorizeData = () => {
+//             // ... (same as your existing categorization logic)
+
+//             // Set categorized data and update state
+//             setCategorizedData(categorizedData);
+//         };
+
+//         reader.readAsBinaryString(file);
+//     };
+
+//     const downloadCategorizedData = () => {
+//         // Download categorized data as an Excel file
+//         const sheet = XLSX.utils.json_to_sheet(categorizedData);
+//         const blob = XLSX.write(sheet, { bookType: 'xlsx', type: 'blob' });
+//         const url = URL.createObjectURL(blob);
+//         const a = document.createElement('a');
+//         a.href = url;
+//         a.download = 'categorized_data.xlsx';
+//         a.click();
+//         URL.revokeObjectURL(url);
+//     };
+
+//     const { getRootProps, getInputProps } = useDropzone({ onDrop });
+
+//     return (
+//         <div>
+//             <div className='upper'>
+//                 <div {...getRootProps()}>
+//                     <input {...getInputProps()} />
+//                     <p>Drag 'n' drop an Excel file here, or click to select one</p>
+//                 </div>
+//             </div>
+//             <div className='lower'>
+//                 <div className='lower-left'>
+//                     {uploadedData.length > 0 && (
+//                         <div>
+//                             <h3>Original Excel Data:</h3>
+//                             <table border="1">
+//                                 {/* ... (same as your existing code) */}
+//                             </table>
+//                             {/* Add a button to trigger categorization */}
+//                             <button onClick={categorizeData}>Give me category</button>
+//                         </div>
+//                     )}
+//                 </div>
+//                 <div className='lower-right'>
+//                     {categorizedData.length > 0 && (
+//                         <div>
+//                             <h3>Categorized Data:</h3>
+//                             <table border="1">
+//                                 {/* ... (same as your existing code) */}
+//                             </table>
+//                             {/* Add a button to download categorized data */}
+//                             <button onClick={downloadCategorizedData}>Download Categorized Data</button>
+//                         </div>
+//                     )}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default FileUpload;

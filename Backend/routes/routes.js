@@ -6,6 +6,7 @@ import { studentdata,cResult ,Usubjects,Dusubjects,dResult} from "../controller/
 import { addNotice } from "../controller/notice-controller.js";
 
 import express from "express";
+import { addTest } from "../controller/test-controller.js";
 const route = express.Router();
 
 // Your existing routes
@@ -25,5 +26,10 @@ route.post('/dsubjects', Dusubjects);
 
 // New Notice routes
 route.post('/addNotice', addNotice);
+
+
+
+
+route.post('/tests',addTest)
 
 export default route;

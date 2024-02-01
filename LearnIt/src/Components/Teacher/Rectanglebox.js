@@ -17,61 +17,33 @@ const contactInfo = {
   address: 'Bay Area, San Francisco, CA',
 };
 
-
-
-
 // React component
 const Rectanglebox = () => {
-
-//  >>>>>>>>>>> api   fetch the data of the students  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//   const Student = mongoose.model('Student', studentSchema);
-
-// // API endpoint to get all students
-// app.get('/api/students', async (req, res) => {
-//   try {
-//     const students = await Student.find();
-//     res.json(students);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send('Internal Server Error');
-//   }
-// });
-
   return (
-    <div className="big-container">
-      <div className="container">
-        <div className="rectangle-box">
-          <div className="image-container">
-            <img src="Profilepicture.jpg" alt="Student" className="round-image" />
-          </div>
-          <div className="info-container">
-            <p>{`Name: ${studentData.name}`}</p>
-            <p>{`Class: ${studentData.class}`}</p>
-            <p>{`Roll No: ${studentData.rollNo}`}</p>
-          </div>
+    <div className="container">
+      <div className="rectangle-box">
+        <div className="image-container">
+          <img src="Profilepicture.jpg" alt="Student" className="round-image" />
         </div>
-        <div className="rectangle-box horizontal">
-          <div className="info-container">
-            <p>{`Full Name: ${contactInfo.fullName}`}</p>
-            <p>{`Email: ${contactInfo.email}`}</p>
-            <p>{`Phone: ${contactInfo.phone}`}</p>
-            <p>{`Mobile: ${contactInfo.mobile}`}</p>
-            <p>{`Address: ${contactInfo.address}`}</p>
-          </div>
-        </div>
-        <div>
-          <performance/>
+        <div className="info-container">
+          <p>{`Name: ${studentData.name}`}</p>
+          <p>{`Class: ${studentData.class}`}</p>
+          <p>{`Roll No: ${studentData.rollNo}`}</p>
         </div>
       </div>
+      <div className="rectangle-box horizontal">
+        <div className="info-container">
+          <p>{`Full Name: ${contactInfo.fullName}`}</p>
+          <p>{`Email: ${contactInfo.email}`}</p>
+          <p>{`Phone: ${contactInfo.phone}`}</p>
+          <p>{`Mobile: ${contactInfo.mobile}`}</p>
+          <p>{`Address: ${contactInfo.address}`}</p>
+        </div>
+      </div>
+      <div>
+        <performance />
+      </div>
     </div>
-
-
-
-
-
-        
-
-    
   );
 };
 

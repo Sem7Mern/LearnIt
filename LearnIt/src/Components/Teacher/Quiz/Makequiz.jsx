@@ -6,7 +6,7 @@ const Makequiz = () => {
     const [currentQuestion, setCurrentQuestion] = useState({
         question: '',
         options: ['', '', '', ''],
-        answer: '',
+        correct_answer: '',
     });
 
     const handleInputChange = (index, value) => {
@@ -19,11 +19,11 @@ const Makequiz = () => {
 
     const handleAddQuestion = () => {
         if (validateQuestion(currentQuestion)) {
-            setQuestions((prevQuestions) => [...prevQuestions, { subject, ...currentQuestion }]);
+            setQuestions((prevQuestions) => [...prevQuestions, {...currentQuestion }]);
             setCurrentQuestion({
                 question: '',
                 options: ['', '', '', ''],
-                answer: '',
+                correct_answer: '',
             });
         } else {
             alert("Please add all required fields (Question, Options, Answer).");
@@ -34,13 +34,46 @@ const Makequiz = () => {
         return (
             question.question.trim() !== '' &&
             question.options.every((option) => option.trim() !== '') &&
-            question.answer.trim() !== ''
+            question.correct_answer.trim() !== ''
         );
     };
 
-    const handleCreateQuiz = () => {
+
+
+     const postCurrentQuiz = async(credentials)=>{
+        try {
+    console.log("trying to make request");
+            const response = await fetch(`http://localhost:8000/tests`, {
+                method: 'POST',
+                headers: {
+                  "Content-Type": "application/json",
+                 
+                },
+                body: JSON.stringify(
+    
+                  { questions: credentials}
+          
+                  )
+              });
+              const averageMarks = await response.json();
+         
+              return averageMarks;
+           
+    
+    
+        } catch (error) {
+            console.log("error while adduser",error.message);
+        }
+    }
+
+
+
+    const handleCreateQuiz = async() => {
         // You can implement your logic here to handle the quiz creation
         console.log('Quiz created:', questions);
+        let quiz = {quiztype:"currentQuiz",title:subject, questions:questions}
+        await postCurrentQuiz(quiz)
+setQuestions([])
     };
 
     return (
@@ -49,6 +82,7 @@ const Makequiz = () => {
             <div className='left' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "600px" }}>
                 <h2>Add Question</h2>
                 <div style={{ width: "100%" }}>
+          
                     <div>
                         <label style={{ fontSize: '16px' }}>Subject:</label>
                         <input
@@ -90,11 +124,11 @@ const Makequiz = () => {
                         <input
                             style={{ width: "400px", marginBottom: "20px" }}
                             type="text"
-                            value={currentQuestion.answer}
+                            value={currentQuestion.correct_answer}
                             onChange={(e) =>
                                 setCurrentQuestion((prevQuestion) => ({
                                     ...prevQuestion,
-                                    answer: e.target.value,
+                                    correct_answer: e.target.value,
                                 }))
                             }
                         />

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const questionSchema = new mongoose.Schema({
+  
     question: {
         type: String,
         required: true,
@@ -16,9 +17,18 @@ const questionSchema = new mongoose.Schema({
 });
 
 const quizSchema = new mongoose.Schema({
+    quiztype:{
+        type:String,
+        required:true
+    },
+
     title: {
         type: String,
         required: true,
+    },
+    content:{
+        type:String,
+        required:false
     },
     questions: {
         type: [questionSchema],

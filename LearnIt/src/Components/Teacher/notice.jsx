@@ -1,25 +1,51 @@
 // Inbox.js
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { fetchnotices, postNotice } from '../../service/noticeapi';
 
 function Inbox() {
-    const [userId, setUserId] = useState('');
+    const [user, setUser] = useState('');
     const [notice, setNotice] = useState('');
+    const [nothing, setnothin] = useState(null);
     const [notices, setNotices] = useState([]);
 
-    const handlePostNotice = () => {
-        if (userId.trim() !== '' && notice.trim() !== '') {
-            setNotices([...notices, { userId, notice }]);
-            setUserId('');
+    const handlePostNotice = async() => {
+        if (user.trim() !== '' && notice.trim() !== '') {
+            setNotices([...notices, { user, notice }]);
+            setUser('');
             setNotice('');
         }
+let userId = localStorage.getItem("email")
+await postNotice({user:userId, notice:notice})
     };
 
     const handleClearNotice = () => {
-        setUserId('');
+        setUser('');
         setNotice('');
     };
 
+const callasyncfunctin= async()=>{
+
+ let res = await fetchnotices();
+ console.log("result is");
+console.log(res);
+res.map((note)=>{
+    console.log(note);
+    setNotices(prevState => [...prevState, { user: note.user, notice: note.notice }]);
+
+})
+console.log("notices is" );
+console.log(notices);
+}
+
+    useEffect(() => {
+callasyncfunctin();
+
+    },[null]);
+  
+    
+    
+    
     return (
         <div className='chat-container' style={{ display: 'flex', height: '100vh', backgroundColor: '#f4f4f4' }}>
             {/* Left Side */}
@@ -33,8 +59,8 @@ function Inbox() {
                         <input
                             type="text"
                             placeholder="Enter User ID"
-                            value={userId}
-                            onChange={(e) => setUserId(e.target.value)}
+                            value={user}
+                            onChange={(e) => setUser(e.target.value)}
                             style={{ width: '100%', marginBottom: '10px', padding: '5px' }}
                         />
                         <label>Notice:</label>
@@ -59,7 +85,7 @@ function Inbox() {
                 <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Notices:</h2>
                 {notices.map((n, index) => (
                     <div key={index} style={{ marginBottom: '10px', padding: '10px', backgroundColor: '#fff', borderRadius: '5px', boxShadow: '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)' }}>
-                        <strong>{n.userId}:</strong> {n.notice}
+                        <strong>{n.user}:</strong> {n.notice}
                     </div>
                 ))}
             </div>

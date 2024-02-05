@@ -56,18 +56,8 @@ import GoogleForm from './Components/Teacher/Quiz/GoogleForm.jsx';
 function App() {
 
 
-  const [flag, setflag] = useState(false);
 
 
-  useEffect(() => {
-    console.log("rendered");
-    if (localStorage.getItem("email")) {
-      setflag(true)
-    }
-    else {
-      setflag(false);
-    }
-  }, [])
 
   return (
 

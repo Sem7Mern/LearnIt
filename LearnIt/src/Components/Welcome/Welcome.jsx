@@ -3,6 +3,7 @@ import './Welcome.css'; // Assuming you have your styles defined in Welcome.css
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getstudentdata } from '../../service/quizapi';
+import Inbox from './Inbox';
 
 function Welcome() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function Welcome() {
   const [Amarks, setAmarks] = useState([]);
   const [ctest, setctest] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [inboxv, setInboxv] = useState(false);
 
   const [studentInfo, setStudentInfo] = useState({
     name: '',
@@ -69,6 +71,9 @@ function Welcome() {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+  const handleinboxv = ()=>{
+setInboxv(true);
+  }
 
   return (
     <>
@@ -100,11 +105,16 @@ function Welcome() {
                   Chatbot
                 </button>
               </li>
+              <li>
+                <button type="button" className="btn btn-light btn-block" onClick={handleinboxv}>
+                  Inbox
+                </button>
+              </li>
             </ul>
           </nav>
         </div>
         {/* Page Content */}
-        <div className="right">
+      {!inboxv?  <div className="right">
           <div
             className="this-container"
             style={{
@@ -148,7 +158,7 @@ function Welcome() {
 
 
           </div>
-        </div>
+        </div>:<Inbox/>}
       </div>
     </>
   );

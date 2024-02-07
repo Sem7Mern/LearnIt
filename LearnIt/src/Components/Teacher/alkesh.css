@@ -5,7 +5,9 @@
   
   .App2 {
     display: flex;
-    margin-left: 2px; /* Adjusted margin to increase the size of App */
+    margin-left: 0px;
+    position: relative;
+    top: 59px; /* Adjusted margin to increase the size of App */
   }
   
   .left-nav {

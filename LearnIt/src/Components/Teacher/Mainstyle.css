@@ -12,6 +12,8 @@ body {
   }
   
   .left-nav {
+    position: relative;
+    top: 10px;
     width: 20%;
     color: #9c88883d;
     padding: 20px;

@@ -66,7 +66,8 @@ function App() {
 
       <Router>
 
-        <Navbar />
+        <Navbar /> 
+
         {/* <----------------- Student Section ------------> */}
 
         <Routes>

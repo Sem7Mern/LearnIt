@@ -78,7 +78,7 @@ callasyncfunctin();
             </div>
 
             {/* Right Side */}
-            <div className='right' style={{
+            <div className='rights' style={{
                 width: '850px', borderLeft: '1px solid #ccc', padding: '20px', boxSizing: 'border-box',
                 backgroundImage: `url("https://i.pinimg.com/600x315/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg")`
             }}>

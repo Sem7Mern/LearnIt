@@ -8,6 +8,7 @@ import Makequiz from "./Quiz/Makequiz";
 import MakeDynamic from './Quiz/MakeDynamic'
 import GoogleForm from './Quiz/GoogleForm'
 import Inbox from './notice'
+import Blank from './Blank.jsx'
 const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 function Main() {
@@ -20,6 +21,7 @@ function Main() {
   const [currentQuiz, setcurrentQuiz] = useState(false);
   const [dynamic, setdynamic] = useState(false);
   const [google, setgoogle] = useState(false);
+  const [blank, setblank] = useState(false);
   const [logout, setlogout] = useState(false);
 
   const [value, setvalue] = useState("")
@@ -74,6 +76,7 @@ const setsome = (value)=>{
       setcurrentQuiz(false)
       setdynamic(false)
       setgoogle(false);
+      setblank(false)
       break;
     case "inbox":
       sethome(false);
@@ -83,6 +86,7 @@ const setsome = (value)=>{
       setcurrentQuiz(false)
       setdynamic(false)
       setgoogle(false);
+      setblank(false)
       break;
   case "category":
     sethome(false);
@@ -92,6 +96,7 @@ const setsome = (value)=>{
     setcurrentQuiz(false)
     setdynamic(false)
     setgoogle(false);
+    setblank(false)
     break;
   case "currentQuiz":
     sethome(false);
@@ -101,6 +106,7 @@ const setsome = (value)=>{
     setcurrentQuiz(true)
     setdynamic(false)
     setgoogle(false);
+    setblank(false)
     break;
   case "dynamic":
     sethome(false);
@@ -110,6 +116,7 @@ const setsome = (value)=>{
     setcurrentQuiz(false)
     setdynamic(true)
     setgoogle(false);
+    setblank(false)
     break;
   case "google":
     sethome(false);
@@ -119,6 +126,17 @@ const setsome = (value)=>{
     setcurrentQuiz(false)
     setdynamic(false)
     setgoogle(true);
+    setblank(false)
+    break;
+  case "blank":
+    sethome(false);
+    setcategory(false);
+    setinbox(false)
+    setcategory(false)
+    setcurrentQuiz(false)
+    setdynamic(false)
+    setgoogle(false);
+    setblank(true)
     break;
   }
 
@@ -160,12 +178,20 @@ const setsome = (value)=>{
           </li>
           <li>
             <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("blank")}}>Blank</button>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
             <button onClick={()=>{setsome("logout")}}>logout</button>
           </li>
 
         </ul>
       </div>
-      
+
+    
+   
+      <div style={{position:"relative" ,top:"10px", height:"625px",overflow:"auto", 
+    width: "100%"}}>
     {home ? <div>
     <div className="main-content">
     
@@ -301,12 +327,15 @@ const setsome = (value)=>{
       </div>
     </div>
     </div>:null}   
+
+   
 {category ? <Category/>:null}
 {inbox ? <Inbox/>:null}
 {currentQuiz? <Makequiz/>:null}
 {dynamic? <MakeDynamic/>:null}
 {google? <GoogleForm/>:null}
-
+{blank? <Blank/>:null}
+</div>
 
 
 </div> 

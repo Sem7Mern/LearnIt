@@ -39,7 +39,7 @@ const Rectanglebox = () => {
 
   return (
     
-      <div className="container">
+      <div className="std-container">
         <div className="rectangle-box">
           <div className="image-container">
             <img src="/Profilepicture.jpg" alt="Student" className="round-image" />
@@ -50,7 +50,7 @@ const Rectanglebox = () => {
             <p>{`Roll No: ${studentData.rollNo}`}</p>
           </div>
         </div>
-        <div className="rectangle-box horizontal">
+        <div className="rectangle-horizontal">
           <div className="info-container">
             <p>{`Full Name: ${contactInfo.fullName}`}</p>
             <p>{`Email: ${contactInfo.email}`}</p>

@@ -160,3 +160,26 @@
     left: 0;
     top: 4px;
 }
+
+/* Responsive media query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .test {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tleft,
+    .tright {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tleft,
+    .tright h2,
+    .tleft p,
+    .tright p,
+    .tleft button,
+    .tright button {
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+}

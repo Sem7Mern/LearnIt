@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+// import './Makequiz.css';
 const Makequiz = () => {
     const [questions, setQuestions] = useState([]);
     const [subject, setSubject] = useState('');

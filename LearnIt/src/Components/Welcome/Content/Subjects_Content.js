@@ -1,7 +1,7 @@
 // Subjects_Content.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Subject_cont.css';
+import './Subjects_Content.css';
 
 
 const Subjects_Content = () => {
@@ -11,6 +11,7 @@ const Subjects_Content = () => {
 
 
     display: 'block',
+    width:'160px',
     marginTop: '10px',
     padding: '15px', // Increased padding for better touch interaction
     fontSize: '18px', // Slightly larger font size

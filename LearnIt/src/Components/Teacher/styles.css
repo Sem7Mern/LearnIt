@@ -108,3 +108,51 @@
   .sdp--select__month button {
     text-align: left;
   }
+
+  /* Add media queries for responsive design */
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for small screens */
+  .sdp {
+    width: 12rem;
+  }
+
+  .sdp--month-name {
+    padding: 0.3rem;
+  }
+
+  .sdp--square-btn {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .sdp--grid {
+    gap: 2px;
+    margin: 0.3rem 0 0;
+  }
+
+  .sdp--grid > p.sdp--text {
+    padding: 0.3rem 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .sdp {
+    width: 10rem;
+    padding: 0.5rem;
+  }
+
+  .sdp--month-name {
+    font-size: 0.9rem;
+  }
+
+  .sdp--text {
+    font-size: 0.9rem;
+  }
+
+  .sdp--square-btn {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}

@@ -41,3 +41,25 @@ p {
   color: #555;
   font-size: 16px;
 }
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .class-alloted-page {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .class-alloted-list th,
+  .class-alloted-list td {
+    padding: 8px 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

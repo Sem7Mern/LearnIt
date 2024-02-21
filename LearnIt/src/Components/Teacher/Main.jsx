@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./alkesh.css"; // Make sure to import the same CSS file used in App.js
 import { type } from "@testing-library/user-event/dist/type";
-import DateCalendarViews from "./DateCalendarViews";
 import Category from './Category'
 import Makequiz from "./Quiz/Makequiz";
 import MakeDynamic from './Quiz/MakeDynamic'
@@ -179,6 +178,10 @@ const setsome = (value)=>{
           <li>
             <i className="fas fa-book"></i>
             <button onClick={()=>{setsome("blank")}}>Blank</button>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("blank1")}}>Blank1</button>
           </li>
           <li>
             <i className="fas fa-book"></i>

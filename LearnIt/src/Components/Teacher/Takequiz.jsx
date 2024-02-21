@@ -1,6 +1,6 @@
 // Takequiz.jsx
 import React, { useState, useEffect } from 'react';
-
+import './Takequiz.css';
 const Takequiz = ({ quizQuestions }) => {
     const [studentName, setStudentName] = useState('');
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

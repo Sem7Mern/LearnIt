@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { fetchnotices } from '../../service/noticeapi';
+import './Inbox.css';
+
 function Inbox() {
   const [notices, setNotices] = useState([]);
 

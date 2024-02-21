@@ -1,7 +1,3 @@
-
-
-
-
   
   .App2 {
     display: flex;
@@ -166,3 +162,19 @@
     display: block;
   }
   
+/* Media Queries */ 
+@media only screen and (max-width: 768px) {
+  .App2 {
+    flex-direction: column;
+  }
+
+  .left-nav,
+  .main-content,
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    display: none; /* Hide the right-sidebar */
+  }
+}

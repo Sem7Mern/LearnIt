@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import * as XLSX from 'xlsx';
+import './FileUpload.css';
 
 const FileUpload = ({ onFileUpload }) => {
     const [uploadedData, setUploadedData] = useState([]);

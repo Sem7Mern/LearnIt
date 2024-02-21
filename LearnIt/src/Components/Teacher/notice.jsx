@@ -1,22 +1,20 @@
-// Inbox.js
-
 import React, { useEffect, useState } from 'react';
 import { fetchnotices, postNotice } from '../../service/noticeapi';
+import './notice.css';
 
 function Inbox() {
     const [user, setUser] = useState('');
     const [notice, setNotice] = useState('');
-    const [nothing, setnothin] = useState(null);
     const [notices, setNotices] = useState([]);
 
-    const handlePostNotice = async() => {
+    const handlePostNotice = async () => {
         if (user.trim() !== '' && notice.trim() !== '') {
             setNotices([...notices, { user, notice }]);
             setUser('');
             setNotice('');
         }
-let userId = localStorage.getItem("email")
-await postNotice({user:userId, notice:notice})
+        let userId = localStorage.getItem("email")
+        await postNotice({ user: userId, notice: notice })
     };
 
     const handleClearNotice = () => {
@@ -24,28 +22,15 @@ await postNotice({user:userId, notice:notice})
         setNotice('');
     };
 
-const callasyncfunctin= async()=>{
-
- let res = await fetchnotices();
- console.log("result is");
-console.log(res);
-res.map((note)=>{
-    console.log(note);
-    setNotices(prevState => [...prevState, { user: note.user, notice: note.notice }]);
-
-})
-console.log("notices is" );
-console.log(notices);
-}
+    const callAsyncFunction = async () => {
+        let res = await fetchnotices();
+        setNotices(res);
+    };
 
     useEffect(() => {
-callasyncfunctin();
+        callAsyncFunction();
+    }, []);
 
-    },[null]);
-  
-    
-    
-    
     return (
         <div className='chat-container' style={{ display: 'flex', height: '100vh', backgroundColor: '#f4f4f4' }}>
             {/* Left Side */}
@@ -89,6 +74,23 @@ callasyncfunctin();
                     </div>
                 ))}
             </div>
+
+            {/* Media Query */}
+            <style>
+                {`
+                    @media only screen and (max-width: 768px) {
+                        .left, .rights {
+                            width: 100%;
+                        }
+                        .rights {
+                            padding: 10px;
+                        }
+                        .left > div {
+                            width: 90%;
+                        }
+                    }
+                `}
+            </style>
         </div>
     );
 }

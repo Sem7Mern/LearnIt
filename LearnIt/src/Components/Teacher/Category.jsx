@@ -1,6 +1,7 @@
 // App.js
 import React, { useState } from 'react';
 import FileUpload from './FileUpload';
+import './Category.css';
 
 const Category = () => {
     const [students, setStudents] = useState([]);

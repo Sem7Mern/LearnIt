@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './instructions.css';
 
 function Instruction() {
     const navigate = useNavigate();

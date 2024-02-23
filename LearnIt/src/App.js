@@ -53,6 +53,7 @@ import Makequiz from './Components/Teacher/Quiz/Makequiz.jsx';
 import Takequiz from './Components/Teacher/Takequiz.jsx';
 import MakeDynamic from './Components/Teacher/Quiz/MakeDynamic.jsx';
 import GoogleForm from './Components/Teacher/Quiz/GoogleForm.jsx';
+import Blank from './Components/Teacher/Blank.jsx';
 function App() {
 
 
@@ -120,6 +121,9 @@ function App() {
           <Route exact path="/takequiz" element={<Takequiz />} />
           <Route exact path="/makedynamic" element={<MakeDynamic />} />
           <Route exact path="/googleform" element={<GoogleForm />} />
+          <Route exact path="/blank" element={<Blank/>} />
+
+
 
 
           {/* <---------------Parent Section --------------> */}

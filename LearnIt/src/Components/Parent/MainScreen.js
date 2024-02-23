@@ -1,43 +1,58 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import "./mainScreen.css"
+// MainScreen.jsx
+import React, { useState } from 'react';
+import './mainScreen.css';
+import '../Teacher/Blank.jsx';
+import './Attendence.js';
+import './Feedback.js';
+import './Chatbot.jsx';
 
-export default function MainScreen() {
-  return (
-    <div>
-      {/* <PerformancePage/> */}
-      File created succesfully .........!
+function MainScreen() {
+    const [showMenu, setShowMenu] = useState(false);
 
-      <div>
-
-
-        <Link to='/performance' >
-          <div className='btn btn-primary' >Performance</div>
-
-        </Link>
-
-        <Link to='/Attendence'>
-          <div className='btn btn-primary' >Attendence</div>
-        </Link>
-
-        <Link to='/Feedback'>
-          <div className='btn btn-primary'>Feedback</div>
-
-        </Link>
-        <Link to='/chatbot'>
-          <div className='btn btn-primary'>Chatbot</div>
-
-        </Link>
-
-
-
-
-
-      </div>
-
-    </div>
-  )
+    return (
+        <div className="app-container">
+            {/* Hamburger menu */}
+            <div className="hamburger-menu" onClick={() => setShowMenu(!showMenu)}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+            {/* Sidebar */}
+            <div className={`sidebar ${showMenu ? 'show' : ''}`}>
+                <div className="sidebar-header">
+                    <div className="sidebar-header-text">
+                      LEARNIT
+                    </div>
+                </div>
+                <div className="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="/blank">Student profile</a>
+                        </li>
+                        <li>
+                            <a href="/Chatbot">Chat</a>
+                        </li>
+                        <li>
+                            <a href="/Performance">Performance </a>
+                        </li>
+                        <li>
+                            <a href="/Attendence">Attendance</a>
+                        </li>
+                        <li>
+                            <a href="/Feedback">Feedback</a>
+                        </li>  
+                        <li>
+                            <a href="/">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {/* Main content */}
+            <div className="main-content">
+                {/* Your main content goes here */}
+            </div>
+        </div>
+    );
 }
 
-
-
+export default MainScreen;

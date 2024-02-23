@@ -18,10 +18,11 @@
     width: 176px;
 }
   
-  .main-content {
+  .main-contentteacher {
     padding: 54px;
     background-color: #fff;
     border: 1px solid #ddd;
+    margin-left: 50px;
     
   }
   

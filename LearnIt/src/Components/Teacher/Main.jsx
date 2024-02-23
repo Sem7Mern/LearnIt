@@ -158,7 +158,7 @@ function Main() {
       {/* Main content */}
       <div style={{ position: "relative", top: "10px", height: "625px", overflow: "auto", width: "100%" }}>
         {home ? <div>
-          <div className="main-content">
+          <div className="main-contentteacher">
 
 
             <div className="welcome-msg">

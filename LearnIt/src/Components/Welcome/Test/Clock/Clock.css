@@ -1,0 +1,22 @@
+.clock {
+    border-radius: 50%;
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media only screen and (max-width: 768px) {
+    .clock {
+      border: 5px solid black; /* Decrease border thickness */
+      width: 200px; /* Adjust width */
+      height: 200px; /* Adjust height */
+    }
+  }
+  
+  /* Media query for screens larger than 768px */
+  @media only screen and (min-width: 769px) {
+    .clock {
+      border: 10px solid black; /* Maintain original border thickness */
+      width: 300px; /* Adjust width */
+      height: 300px; /* Adjust height */
+    }
+  }
+  

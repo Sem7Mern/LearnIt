@@ -1,0 +1,84 @@
+/* Welcome.css */
+
+
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+
+/* Your existing button styles can be applied here */
+
+/* Welcome.css */
+
+.proimg {
+    display: flex;
+    align-items: center;
+}
+
+.this {
+    display: flex;
+    flex-direction: column;
+    /* To stack the text content vertically */
+}
+
+/* Welcome.css */
+
+.btn-light:hover {
+    background-color: red;
+    /* Orange color */
+    color: white;
+    /* Text color on hover */
+}
+
+
+/* ... (existing styles) */
+.sidebar {
+    position: fixed;
+    top: 59px;
+    left: 0;
+    height: 100%;
+
+    background-color: skyblue;
+    /* Set your desired background color */
+    padding: 15px;
+    /* Add padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow effect */
+    z-index: 1000;
+    /* Ensure the sidebar is above other elements */
+}
+
+.right{
+
+    position: relative;
+    top: -109px;
+}
+
+
+/* Responsive media queries */
+@media only screen and (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .welcome {
+        grid-template-columns: 100%; /* Stack columns vertically on small screens */
+    }
+
+    .right {
+        top: -89px; /* Adjust the position of content */
+    }
+
+    .sidebar {
+        width: 100%; /* Take full width on small screens */
+        position: relative; /* Change position to relative for stacking */
+        top: 0; /* Reset top position */
+    }
+}

@@ -1,0 +1,233 @@
+[{
+  "quiz": [
+    {
+      "text": "What is the capital of France?",
+      "choices": [
+        "Paris",
+        "Madrid",
+        "Rome",
+        "London"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "\nWhat is the largest planet in our solar system?",
+      "choices": [
+        "Earth",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "\nWhat is the formula for the area of a rectangle?",
+      "choices": [
+        "A = lw",
+        "A = 2lw",
+        "A = l + w",
+        "A = 2l + 2w"
+      ],
+      "answer": "A"
+    },
+    {
+      "text": "\nWhich of the following is a linear data structure?",
+      "choices": [
+        "Graph",
+        "AVL Trees",
+        "Binary Trees",
+        "Array"
+      ],
+      "answer": "D"
+    },
+    {
+      "text": "\nWhich of the following is a Divide and Conquer algorithm?",
+      "choices": [
+        "Bubble Sort",
+        "Merge Sort",
+        "Heap Sort",
+        "Selection Sort"
+      ],
+      "answer": "B"
+    }
+  ]
+},{
+  "quiz": [
+    {
+      "text": "Which of the following is a structured data store that supports indexing and data queries to both EC2 and S3?",
+      "choices": [
+        "CloudWatch",
+        "Amazon SimpleDB",
+        "Amazon Cloudfront",
+        "All of the mentioned"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "\nWhich of the following is an edge-storage or content-delivery system that caches data in different physical locations?",
+      "choices": [
+        "Amazon Relational Database Service",
+        "Amazon SimpleDB",
+        "Amazon Cloudfront",
+        "Amazon Associates Web Services"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "\nWhich of the following allows you to create instances of the MySQL database to support your Web sites?",
+      "choices": [
+        "AECC",
+        "ASQS",
+        "ARDS",
+        "ASSS"
+      ],
+      "answer": "C"
+    },
+    {
+      "text": "\nPoint out the correct statement.",
+      "choices": [
+        "Amazon Elastic Cloud is a system for creating virtual disks(volume)",
+        "SimpleDB interoperates with both Amazon EC2 and Amazon S3",
+        "EC3 is an Analytics as a Service provider",
+        "None of the mentioned"
+      ],
+      "answer": "B"
+    },
+    {
+      "text": "\nPoint out the wrong statement.",
+      "choices": [
+        "Amazon Machine Instances are sized at various levels and rented on a computing/hour basis",
+        "The metrics obtained by CloudWatch may be used to enable a feature called Auto Scaling",
+        "A number of tools are used to support EC2 services",
+        "None of the mentioned"
+      ],
+      "answer": "D"
+    }
+  ]
+},{
+  "quiz": [
+    {
+      "text": "What is nickname of Pradeep?",
+      "choices": [
+        "public",
+        "private",
+        "hybrid",
+        "Poly"
+      ],
+      "answer": "d"
+    },
+    {
+      "text": "\nWhich of the following is a billing and account management service?",
+      "choices": [
+        "Amazon Elastic MapReduce",
+        "Amazon Mechanical Turk",
+        "Amazon DevPay",
+        "Multi-Factor Authentication"
+      ],
+      "answer": "c"
+    },
+    {
+      "text": "\nWhich of the following is a means for accessing human researchers or consultants to help solve problems on a contractual or temporary basis?",
+      "choices": [
+        "A E M",
+        "A M T",
+        "A D",
+        "Multi-Factor Auth"
+      ],
+      "answer": "b"
+    },
+    {
+      "text": "\nWhich of the following is built on top of a Hadoop framework using the Elastic Compute Cloud?",
+      "choices": [
+        "Amazon Elastic MapReduce",
+        "Amazon Mechanical Turk",
+        "Amazon DevPay",
+        "Multi-Factor Authentication"
+      ],
+      "answer": "a"
+    },
+    {
+      "text": "\nWhich of the following is best known service model?",
+      "choices": [
+        "SaaS",
+        "IaaS",
+        "PaaS",
+        "All of the mentioned"
+      ],
+      "answer": "d"
+    },
+    {
+      "text": "\nHow many types of dimensions exists in Cloud Cube Model?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "d"
+    }
+  ]
+},{
+  "quiz": [
+    {
+      "text": "What is nickname of Pradeep?",
+      "choices": [
+        "public",
+        "private",
+        "hybrid",
+        "Poly"
+      ],
+      "answer": "d"
+    },
+    {
+      "text": "\nWhich of the following is a billing and account management service?",
+      "choices": [
+        "Amazon Elastic MapReduce",
+        "Amazon Mechanical Turk",
+        "Amazon DevPay",
+        "Multi-Factor Authentication"
+      ],
+      "answer": "c"
+    },
+    {
+      "text": "\nWhich of the following is a means for accessing human researchers or consultants to help solve problems on a contractual or temporary basis?",
+      "choices": [
+        "A E M",
+        "A M T",
+        "A D",
+        "Multi-Factor Auth"
+      ],
+      "answer": "b"
+    },
+    {
+      "text": "\nWhich of the following is built on top of a Hadoop framework using the Elastic Compute Cloud?",
+      "choices": [
+        "Amazon Elastic MapReduce",
+        "Amazon Mechanical Turk",
+        "Amazon DevPay",
+        "Multi-Factor Authentication"
+      ],
+      "answer": "a"
+    },
+    {
+      "text": "\nWhich of the following is best known service model?",
+      "choices": [
+        "SaaS",
+        "IaaS",
+        "PaaS",
+        "All of the mentioned"
+      ],
+      "answer": "d"
+    },
+    {
+      "text": "\nHow many types of dimensions exists in Cloud Cube Model?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "d"
+    }
+  ]
+}]

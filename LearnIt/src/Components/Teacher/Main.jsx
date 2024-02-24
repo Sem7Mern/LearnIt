@@ -58,42 +58,79 @@ function Main() {
   };
 
   const setsome = (value) => {
-    switch (value) {
+    switch(value){
       case "home":
         sethome(true);
-      
+        setcategory(false);
+        setinbox(false)
+        setcategory(false)
+        setcurrentQuiz(false)
+        setdynamic(false)
+        setgoogle(false);
+        setblank(false)
         break;
       case "inbox":
-       
-        setinbox(true);
-      
-      case "category":
-      
-        setcategory(true);
-      
+        sethome(false);
+        setcategory(false);
+        setinbox(true)
+        setcategory(false)
+        setcurrentQuiz(false)
+        setdynamic(false)
+        setgoogle(false);
+        setblank(false)
         break;
-      case "currentQuiz":
-      
-        setcurrentQuiz(true);
-      
-        break;
-      case "dynamic":
-   
-        setdynamic(true);
-      
-        break;
-      case "google":
-  
-        setgoogle(true);
-        break;
-      case "blank":
-     
-        setblank(true);
-        break;
-      default:
-        // default case, do nothing
-        break;
+    case "category":
+      sethome(false);
+      setcategory(false);
+      setinbox(false)
+      setcategory(true)
+      setcurrentQuiz(false)
+      setdynamic(false)
+      setgoogle(false);
+      setblank(false)
+      break;
+    case "currentQuiz":
+      sethome(false);
+      setcategory(false);
+      setinbox(false)
+      setcategory(false)
+      setcurrentQuiz(true)
+      setdynamic(false)
+      setgoogle(false);
+      setblank(false)
+      break;
+    case "dynamic":
+      sethome(false);
+      setcategory(false);
+      setinbox(false)
+      setcategory(false)
+      setcurrentQuiz(false)
+      setdynamic(true)
+      setgoogle(false);
+      setblank(false)
+      break;
+    case "google":
+      sethome(false);
+      setcategory(false);
+      setinbox(false)
+      setcategory(false)
+      setcurrentQuiz(false)
+      setdynamic(false)
+      setgoogle(true);
+      setblank(false)
+      break;
+    case "blank":
+      sethome(false);
+      setcategory(false);
+      setinbox(false)
+      setcategory(false)
+      setcurrentQuiz(false)
+      setdynamic(false)
+      setgoogle(false);
+      setblank(true)
+      break;
     }
+  
   }
   
   return (
@@ -106,53 +143,47 @@ function Main() {
       </div>
       {/* Navigation */}
       <div className={`left-nav ${showMenu ? 'show' : ''}`}>
-        <ul>
+      <ul>
           <li>
             <i className="fas fa-home"></i>
-            <button onClick={() => { setsome("home") }}>
-              Home
+            <button onClick={()=>{setsome("home")}}>
+             Home
             </button>
           </li>
           <li>
             <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("inbox") }}>Inbox
+            <button onClick={()=>{setsome("inbox")}}>Inbox
             </button>
           </li>
+          {/* <li>
+            <i className="fas fa-calendar-alt"></i>
+            <span><Link to="/calendar">cl</Link></span>
+          </li> */}
           <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("Category ") }}>Category
-            </button>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("category")}}>category</button>
           </li>
           <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("Make Quiz") }}>Make Quiz
-            </button>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("currentQuiz")}}>Make current Quiz</button>
           </li>
           <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("Make  dynamic Quiz") }}>Make  dynamic Quiz
-            </button>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("dynamic")}}>Make dynamic quiz</button>
           </li>
           <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("Make google form ") }}>Make google form 
-            </button>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("google")}}>google-form quiz</button>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("blank")}}>Blank</button>
+          </li>
+          <li>
+            <i className="fas fa-book"></i>
+            <button onClick={()=>{setsome("logout")}}>logout</button>
           </li>
 
-          <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("blank ") }}>blank 
-            </button>
-          </li>
-
-       
-
-          <li>
-            <i className="fas fa-inbox"></i>
-            <button onClick={() => { setsome("Logout ") }}>Logout
-            </button>
-          </li>
-          {/* Add other menu items */}
         </ul>
       </div>
       {/* Main content */}

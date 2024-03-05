@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "./alkesh.css";
 import { type } from "@testing-library/user-event/dist/type";
 import Category from './Category'
+import OptionsComponent from "./Options.jsx"; // Renamed to avoid conflict with state name
 import Makequiz from "./Quiz/Makequiz";
 import MakeDynamic from './Quiz/MakeDynamic'
 import GoogleForm from './Quiz/GoogleForm'
 import Inbox from './notice'
 import Blank from './Blank.jsx'
+
 const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 function Main() {
@@ -19,12 +21,12 @@ function Main() {
   const [category, setcategory] = useState(false);
   const [currentQuiz, setcurrentQuiz] = useState(false);
   const [dynamic, setdynamic] = useState(false);
-  const [google, setgoogle] = useState(false);
+  const [options, setOptions] = useState(false); // Changed variable name to avoid conflict
   const [blank, setblank] = useState(false);
   const [logout, setlogout] = useState(false);
   const [value, setvalue] = useState("")
   const [status, setStatus] = useState([]);
-  const [showMenu, setShowMenu] = useState(false); // Define showMenu state
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     const fetchStudentData = async () => {
@@ -47,7 +49,7 @@ function Main() {
     fetchStudentData();
   }, [selectedValue]);
 
-  const options = [
+  const optionsList = [
     { value: "8th", label: "8th" },
     { value: "9th", label: "9th" },
     { value: "10th", label: "10th" },
@@ -58,81 +60,46 @@ function Main() {
   };
 
   const setsome = (value) => {
-    switch(value){
+    switch (value) {
       case "home":
         sethome(true);
         setcategory(false);
-        setinbox(false)
-        setcategory(false)
-        setcurrentQuiz(false)
-        setdynamic(false)
-        setgoogle(false);
-        setblank(false)
+        setinbox(false);
+        setcurrentQuiz(false);
+        setdynamic(false);
+        setOptions(false);
+        setblank(false);
         break;
       case "inbox":
         sethome(false);
         setcategory(false);
-        setinbox(true)
-        setcategory(false)
-        setcurrentQuiz(false)
-        setdynamic(false)
-        setgoogle(false);
-        setblank(false)
+        setinbox(true);
+        setcurrentQuiz(false);
+        setdynamic(false);
+        setOptions(false);
+        setblank(false);
         break;
-    case "category":
-      sethome(false);
-      setcategory(false);
-      setinbox(false)
-      setcategory(true)
-      setcurrentQuiz(false)
-      setdynamic(false)
-      setgoogle(false);
-      setblank(false)
-      break;
-    case "currentQuiz":
-      sethome(false);
-      setcategory(false);
-      setinbox(false)
-      setcategory(false)
-      setcurrentQuiz(true)
-      setdynamic(false)
-      setgoogle(false);
-      setblank(false)
-      break;
-    case "dynamic":
-      sethome(false);
-      setcategory(false);
-      setinbox(false)
-      setcategory(false)
-      setcurrentQuiz(false)
-      setdynamic(true)
-      setgoogle(false);
-      setblank(false)
-      break;
-    case "google":
-      sethome(false);
-      setcategory(false);
-      setinbox(false)
-      setcategory(false)
-      setcurrentQuiz(false)
-      setdynamic(false)
-      setgoogle(true);
-      setblank(false)
-      break;
-    case "blank":
-      sethome(false);
-      setcategory(false);
-      setinbox(false)
-      setcategory(false)
-      setcurrentQuiz(false)
-      setdynamic(false)
-      setgoogle(false);
-      setblank(true)
-      break;
+      case "category":
+        sethome(false);
+        setcategory(true);
+        setinbox(false);
+        setcurrentQuiz(false);
+        setdynamic(false);
+        setOptions(false);
+        setblank(false);
+        break;
+      case "options":
+        sethome(false);
+        setcategory(false);
+        setinbox(false);
+        setcurrentQuiz(false);
+        setdynamic(false);
+        setOptions(true);
+        setblank(false);
+        break;
     }
-  
   }
-  
+
   return (
     <div className="App2">
       {/* Hamburger menu */}
@@ -143,62 +110,41 @@ function Main() {
       </div>
       {/* Navigation */}
       <div className={`left-nav ${showMenu ? 'show' : ''}`}>
-      <ul>
+        <ul>
           <li>
             <i className="fas fa-home"></i>
-            <button onClick={()=>{setsome("home")}}>
-             Home
+            <button onClick={() => { setsome("home") }}>
+              Home
             </button>
           </li>
           <li>
             <i className="fas fa-inbox"></i>
-            <button onClick={()=>{setsome("inbox")}}>Inbox
-            </button>
-          </li>
-          {/* <li>
-            <i className="fas fa-calendar-alt"></i>
-            <span><Link to="/calendar">cl</Link></span>
-          </li> */}
-          <li>
-            <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("category")}}>category</button>
+            <button onClick={() => { setsome("inbox") }}>Inbox</button>
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("currentQuiz")}}>Make current Quiz</button>
+            <button onClick={() => { setsome("category") }}>Category</button>
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("dynamic")}}>Make dynamic quiz</button>
+            <button onClick={() => { setsome("options") }}>Make a Quiz</button>
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("google")}}>google-form quiz</button>
+            <button onClick={() => { setsome("blank") }}>Blank</button>
           </li>
           <li>
             <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("blank")}}>Blank</button>
+            <button onClick={() => { setsome("logout") }}>Logout</button>
           </li>
-          <li>
-            <i className="fas fa-book"></i>
-            <button onClick={()=>{setsome("logout")}}>logout</button>
-          </li>
-
         </ul>
       </div>
       {/* Main content */}
       <div style={{ position: "relative", top: "10px", height: "625px", overflow: "auto", width: "100%" }}>
-        {home ? <div>
+        {home && (
           <div className="main-contentteacher">
-
-
             <div className="welcome-msg">
               <h1>Good Morning, Rajvardhan</h1>
-              {/* Replace the image source with your actual image */}
-              {/* <img
-          src="https://i.imgur.com/9QJf3xv.png"
-          alt="teacher and student"
-        /> */}
               <div className="Welcomebox">
                 <p>Your students are doing great! 60% students have completed the test.</p>
               </div>
@@ -213,10 +159,8 @@ function Main() {
                   value={selectedValue.class_}
                   onChange={handleSelectChange}
                 >
-                  <option value="" disabled>
-                    Choose...
-            </option>
-                  {options.map((option) => (
+                  <option value="" disabled>Choose...</option>
+                  {optionsList.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -237,10 +181,13 @@ function Main() {
                   <tbody>
                     {students.map((student) => (
                       <tr key={student.name}>
-                        <a href="/studentprofile"> <td>{student.name}</td></a>
+                        <td><a href="/studentprofile">{student.name}</a></td>
                         <td>{student.dateOfSubmission}</td>
-                        {(typeof student.CMarks === 'object' && typeof student.DMarks === 'object') ? Object.keys(student?.CMarks)?.length === 3 && Object.keys(student?.DMarks)?.length === 3 ? <td>Completed</td> : <td>Pending</td> : <td>Pending</td>}
-
+                        {typeof student.CMarks === 'object' && typeof student.DMarks === 'object' && Object.keys(student?.CMarks)?.length === 3 && Object.keys(student?.DMarks)?.length === 3 ? (
+                          <td>Completed</td>
+                        ) : (
+                          <td>Pending</td>
+                        )}
                       </tr>
                     ))}
                   </tbody>
@@ -248,92 +195,14 @@ function Main() {
               )}
             </div>
           </div>
-          <div className="right-sidebar">
-            <div className="calendar">
-              <h2>December 2023</h2>
-              <table>
-                <thead>
-                  <tr>
-                    {daysOfWeek.map((day, index) => (
-                      <th key={index}>{day}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {/* Replace the following with logic to populate calendar dates */}
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                  </tr>
-                  <tr>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                  </tr>
-                  <tr>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                  </tr>
-                  <tr>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-
-
-                  </tr>
-                  {/* Continue adding rows for the remaining weeks */}
-                </tbody>
-              </table>
-            </div>
-            <div className="timeline">{/* ... (Timeline content) */}</div>
-            <div className="timeline">
-              <h2>Timeline</h2>
-              <ul>
-                <li>
-                  <span>Solve real-world problems involving multi...</span>
-                  <span>{/* Add your timeline content here */}</span>
-                </li>
-                {/* Additional timeline items */}
-              </ul>
-            </div>
-          </div>
-        </div> : null}
-
-
-        {category ? <Category /> : null}
-        {inbox ? <Inbox /> : null}
-        {currentQuiz ? <Makequiz /> : null}
-        {dynamic ? <MakeDynamic /> : null}
-        {google ? <GoogleForm /> : null}
-        {blank ? <Blank /> : null}
+        )}
+        {category && <Category />}
+        {inbox && <Inbox />}
+        {currentQuiz && <Makequiz />}
+        {dynamic && <MakeDynamic />}
+        {options && <OptionsComponent />} {/* Render OptionsComponent */}
+        {blank && <Blank />}
       </div>
-
-
     </div>
   );
 }

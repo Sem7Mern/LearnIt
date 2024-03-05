@@ -54,6 +54,7 @@ import Takequiz from './Components/Teacher/Takequiz.jsx';
 import MakeDynamic from './Components/Teacher/Quiz/MakeDynamic.jsx';
 import GoogleForm from './Components/Teacher/Quiz/GoogleForm.jsx';
 import Blank from './Components/Teacher/Blank.jsx';
+import Options from './Components/Teacher/Options.jsx';
 function App() {
 
 
@@ -122,6 +123,7 @@ function App() {
           <Route exact path="/makedynamic" element={<MakeDynamic />} />
           <Route exact path="/googleform" element={<GoogleForm />} />
           <Route exact path="/blank" element={<Blank/>} />
+          <Route exact path="/options" element={<Options/>} />
 
 
 

@@ -88,7 +88,7 @@ setSubject("")
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
             {/* Left Side */}
-            <div className='left' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "800px" }}>
+            <div className='leftcurrent' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "800px" }}>
                 <h2>Create Test</h2>
                 <div style={{ width: "100%" }}>
         

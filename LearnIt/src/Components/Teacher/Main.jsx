@@ -24,6 +24,7 @@ function Main() {
   const [options, setOptions] = useState(false); // Changed variable name to avoid conflict
   const [blank, setblank] = useState(false);
   const [logout, setlogout] = useState(false);
+
   const [value, setvalue] = useState("")
   const [status, setStatus] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
@@ -97,6 +98,7 @@ function Main() {
         setOptions(true);
         setblank(false);
         break;
+    
     }
   }
 
@@ -129,10 +131,7 @@ function Main() {
             <i className="fas fa-book"></i>
             <button onClick={() => { setsome("options") }}>Make a Quiz</button>
           </li>
-          <li>
-            <i className="fas fa-book"></i>
-            <button onClick={() => { setsome("blank") }}>Blank</button>
-          </li>
+        
           <li>
             <i className="fas fa-book"></i>
             <button onClick={() => { setsome("logout") }}>Logout</button>
@@ -140,7 +139,7 @@ function Main() {
         </ul>
       </div>
       {/* Main content */}
-      <div style={{ position: "relative", top: "10px", height: "625px", overflow: "auto", width: "100%" }}>
+      <div style={{ position: "relative", top: "10px", height: "auto", overflow: "auto", width: "100%" }}>
         {home && (
           <div className="main-contentteacher">
             <div className="welcome-msg">
@@ -202,6 +201,8 @@ function Main() {
         {dynamic && <MakeDynamic />}
         {options && <OptionsComponent />} {/* Render OptionsComponent */}
         {blank && <Blank />}
+        {/* {Calendar && <Calendar/>} */}
+
       </div>
     </div>
   );

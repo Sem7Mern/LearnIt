@@ -2,21 +2,21 @@
 
 /* Media queries */
 @media only screen and (max-width: 768px) {
-    .left {
+    .leftside {
       width: 100%;
       padding: 10px;
       margin-top: 20px;
     }
   
-    .left input[type="text"] {
+    .leftside input[type="text"] {
       width: calc(100% - 40px); /* Adjusted width to accommodate padding and margins */
     }
   
-    .left button {
+    .leftside button {
       margin-right: 10px;
     }
   
-    .right {
+    .rightside {
       width: 100%;
       margin: 20px 0;
       padding: 20px;

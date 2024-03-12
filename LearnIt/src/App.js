@@ -55,6 +55,8 @@ import MakeDynamic from './Components/Teacher/Quiz/MakeDynamic.jsx';
 import GoogleForm from './Components/Teacher/Quiz/GoogleForm.jsx';
 import Blank from './Components/Teacher/Blank.jsx';
 import Options from './Components/Teacher/Options.jsx';
+import Calender from './Components/Parent/Calender.jsx';
+import Home1 from './Components/Home1.jsx';
 function App() {
 
 
@@ -70,9 +72,17 @@ function App() {
 
         <Navbar /> 
 
+
+     
+
         {/* <----------------- Student Section ------------> */}
 
         <Routes>
+
+             {/* <------------------------- Home Page ---------------------> */}
+             <Route exact path="/home1" element={<Home1 />} />
+           
+
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/StudentLogin" element={<Form />} />
           <Route exact path="/ParentLogin" element={<Form />} />
@@ -110,6 +120,11 @@ function App() {
           <Route exact path="/Sciencep" element={<Sciencep />} />
           <Route exact path="/test" element={<Test />} />
           <Route exact path="/subjects" element={<Subjects />} />
+
+
+
+
+
           {/* <----------------- Teacher Section ------------> */}
 
           <Route exact path="/main" element={<Main />} />
@@ -135,6 +150,9 @@ function App() {
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/chatbot" element={<Chatbot />} />
           <Route exact path="/studentprofile" element={<Profile />} />
+          <Route exact path="/calender" element={<Calender/>} />
+
+
 
         </Routes >
       </Router >

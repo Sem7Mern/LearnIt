@@ -78,7 +78,7 @@ const Makequiz = () => {
     const handleCreateQuiz = async() => {
         // You can implement your logic here to handle the quiz creation
         console.log('Quiz created:', questions);
-        let quiz = {quiztype:"currentQuiz",title:subject, content:content, questions:questions}
+        let quiz = {quiztype:"DynamicQuiz",title:subject, content:content, questions:questions}
         await postDynamicQuiz(quiz)
 setQuestions([])
 setContent("");
@@ -88,7 +88,7 @@ setSubject("")
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
             {/* Left Side */}
-            <div className='leftcurrent' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "800px" }}>
+            <div className='leftside1' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "800px"}}>
                 <h2>Create Test</h2>
                 <div style={{ width: "100%" }}>
         
@@ -96,7 +96,7 @@ setSubject("")
                     <div>
                         <label style={{ fontSize: '16px' }}>Subject:</label>
                         <input
-                            style={{ width: "500px" }}
+                            style={{ width: "500px",display:"flex", flexDirection:"column" }}
                             type="text"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
@@ -159,7 +159,7 @@ setSubject("")
             </div>
 
             {/* Right Side */}
-            <div className="right" style={{ width: '60%', margin: '20px', padding: '20px', background: "grey", marginTop: "130px", height: "900px", textAlign: 'left' }}>
+            <div className="rightside1" style={{ width: '60%', margin: '20px', padding: '20px', background: "grey", marginTop: "130px", height: "900px", textAlign: 'left' }}>
                 <h2>Quiz Questions</h2>
                 <ul style={{ listStyleType: 'none', padding: 0 }}>
                     {content && (

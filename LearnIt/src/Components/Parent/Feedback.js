@@ -96,7 +96,7 @@ const Feedback = () => {
 
            
 
-            <button type="submit">Submit Feedback</button>
+        <div className="feedbackbtn"><button type="submit">Submit Feedback</button> </div>
         </form>
     </div>
     

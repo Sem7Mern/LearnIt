@@ -18,12 +18,68 @@
     width: 176px;
 }
   
-  .main-contentteacher {
+  /* .main-contentteacher {
     padding: 54px;
     background-color: #fff;
     border: 1px solid #ddd;
     margin-left: 50px;
     
+  }
+   */
+   .main-contentteacher {
+    padding: 54px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: 50px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  }
+  
+  .welcome-msg {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  }
+  
+  .Welcomebox {
+    color: #333;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .submitted-tests {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  }
+  
+  .submitted-tests table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .submitted-tests th,
+  .submitted-tests td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .submitted-tests th {
+    background-color: #f2f2f2; /* Gray background for table header */
+  }
+  
+  .submitted-tests tbody tr:hover {
+    background-color: #f9f9f9; /* Light gray background on hover */
   }
   
   .right-sidebar {

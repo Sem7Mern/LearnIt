@@ -43,7 +43,7 @@ const Makequiz = () => {
      const postCurrentQuiz = async(credentials)=>{
         try {
     console.log("trying to make request");
-            const response = await fetch(`http://localhost:8000/tests`, {
+            const response = await fetch("http://localhost:8000/tests", {
                 method: 'POST',
                 headers: {
                   "Content-Type": "application/json",
@@ -81,7 +81,7 @@ setQuestions([])
             {/* Left Side */}
             <div className='leftside' style={{ width: '40%', background: 'skyblue', padding: '20px', marginTop: "60px", height: "600px" }}>
                 <h2>Add Question</h2>
-                <div style={{ width: "100%" }}>
+                <div style={{ width: "100%" ,display:"flex",flexDirection:"column" }}>
           
                     <div>
                         <label style={{ fontSize: '16px' }}>Subject:</label>
@@ -139,7 +139,7 @@ setQuestions([])
             </div>
 
             {/* Right Side */}
-            <div className="right" style={{ width: '60%', margin: '20px', padding: '20px', background: "grey", marginTop: "130px", height: "900px", textAlign: 'left' }}>
+            <div className="rightside" style={{ width: '60%', margin: '20px', padding: '20px', background: "grey", marginTop: "130px", height: "900px", textAlign: 'left' }}>
                 <h2>Quiz Questions</h2>
                 <ul style={{ listStyleType: 'none', padding: 0 }}>
                     {questions.map((q, index) => (

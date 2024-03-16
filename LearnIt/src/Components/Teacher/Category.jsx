@@ -31,14 +31,7 @@ const Category = () => {
             <FileUpload onFileUpload={categorizeStudents} />
             {students.length > 0 && (
                 <div>
-                    <h2>Categorized Students:</h2>
-                    <ul>
-                        {students.map((student) => (
-                            <li key={student.name}>
-                                {`${student.name} - Marks: ${student.marks}, Category: ${student.category}`}
-                            </li>
-                        ))}
-                    </ul>
+
                 </div>
             )}
         </div>

@@ -1,4 +1,3 @@
-// FileUpload.js
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import * as XLSX from 'xlsx';
@@ -7,6 +6,7 @@ import './FileUpload.css';
 const FileUpload = ({ onFileUpload }) => {
     const [uploadedData, setUploadedData] = useState([]);
     const [categorizedData, setCategorizedData] = useState([]);
+    const [excelFile, setExcelFile] = useState(null);
 
     const onDrop = (acceptedFiles) => {
         // Assuming only one file is uploaded
@@ -72,6 +72,25 @@ const FileUpload = ({ onFileUpload }) => {
 
     const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
+    const handleCreateExcel = () => {
+        const ws = XLSX.utils.json_to_sheet(categorizedData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Categorized Data');
+        const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+        const data = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = window.URL.createObjectURL(data);
+        setExcelFile(url);
+    };
+
+    const handleDownloadExcel = () => {
+        const a = document.createElement('a');
+        a.href = excelFile;
+        a.download = 'categorized_data.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(excelFile);
+    };
+
     return (
         <div>
             <div className='upper'>
@@ -129,7 +148,12 @@ const FileUpload = ({ onFileUpload }) => {
                                 </tbody>
                             </table>
                         </div>
-
+                    )}
+                    {categorizedData.length > 0 && (
+                        <div>
+                            <button onClick={handleCreateExcel} style={{ marginTop: '20px', marginRight: "10px" }}>Create Excel</button>
+                            {excelFile && <button onClick={handleDownloadExcel}>Download Excel</button>}
+                        </div>
                     )}
                 </div>
             </div>
@@ -138,81 +162,3 @@ const FileUpload = ({ onFileUpload }) => {
 };
 
 export default FileUpload;
-
-
-// // FileUpload.js
-// import React, { useState } from 'react';
-// import { useDropzone } from 'react-dropzone';
-// import * as XLSX from 'xlsx';
-
-// const FileUpload = ({ onFileUpload }) => {
-//     const [uploadedData, setUploadedData] = useState([]);
-//     const [categorizedData, setCategorizedData] = useState([]);
-
-//     const onDrop = (acceptedFiles) => {
-//         // ... (same as your existing onDrop code)
-
-//         // Categorize data when the button is clicked
-//         const categorizeData = () => {
-//             // ... (same as your existing categorization logic)
-
-//             // Set categorized data and update state
-//             setCategorizedData(categorizedData);
-//         };
-
-//         reader.readAsBinaryString(file);
-//     };
-
-//     const downloadCategorizedData = () => {
-//         // Download categorized data as an Excel file
-//         const sheet = XLSX.utils.json_to_sheet(categorizedData);
-//         const blob = XLSX.write(sheet, { bookType: 'xlsx', type: 'blob' });
-//         const url = URL.createObjectURL(blob);
-//         const a = document.createElement('a');
-//         a.href = url;
-//         a.download = 'categorized_data.xlsx';
-//         a.click();
-//         URL.revokeObjectURL(url);
-//     };
-
-//     const { getRootProps, getInputProps } = useDropzone({ onDrop });
-
-//     return (
-//         <div>
-//             <div className='upper'>
-//                 <div {...getRootProps()}>
-//                     <input {...getInputProps()} />
-//                     <p>Drag 'n' drop an Excel file here, or click to select one</p>
-//                 </div>
-//             </div>
-//             <div className='lower'>
-//                 <div className='lower-left'>
-//                     {uploadedData.length > 0 && (
-//                         <div>
-//                             <h3>Original Excel Data:</h3>
-//                             <table border="1">
-//                                 {/* ... (same as your existing code) */}
-//                             </table>
-//                             {/* Add a button to trigger categorization */}
-//                             <button onClick={categorizeData}>Give me category</button>
-//                         </div>
-//                     )}
-//                 </div>
-//                 <div className='lower-right'>
-//                     {categorizedData.length > 0 && (
-//                         <div>
-//                             <h3>Categorized Data:</h3>
-//                             <table border="1">
-//                                 {/* ... (same as your existing code) */}
-//                             </table>
-//                             {/* Add a button to download categorized data */}
-//                             <button onClick={downloadCategorizedData}>Download Categorized Data</button>
-//                         </div>
-//                     )}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default FileUpload;

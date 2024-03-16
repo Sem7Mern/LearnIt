@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction";
 import "./Calender.css"; // Import the CSS file
-
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 function Calendar() {
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState({ title: "", date: "" });
 
-  
+
   const handleDateClick = (arg) => {
     setNewEvent({ ...newEvent, date: arg.dateStr });
   };
@@ -28,7 +27,7 @@ function Calendar() {
 
   return (
     <div>
-     
+
 
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -42,7 +41,7 @@ function Calendar() {
         events={events}
         dateClick={handleDateClick}
       />
-       <div>
+      <div>
         <h2>Add Event</h2>
         <label>
           Title:

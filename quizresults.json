@@ -1,0 +1,549 @@
+[{
+  "_id": {
+    "$oid": "6493de244812a53b742d4425"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 2,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:07:40 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6493df03c7b47aee816d5d11"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 4,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:11:23 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6493e060c7b47aee816d5d1d"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 5,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:17:12 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6493e3cd4812a53b742d448f"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 1,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:31:49 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6493e51b4d9ab5f13473f6ef"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Nandika",
+  "score": 3,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:37:23 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6493e65d1cca99f8d316c2df"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 3,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "11:42:45 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6494288a1cca99f8d316c362"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 3,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "4:25:06 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6494289c1cca99f8d316c3a3"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "4:25:24 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64942b444d9ab5f13473f71f"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Nandika",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "4:36:44 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64942b444d9ab5f13473f721"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Nandika",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "4:36:44 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64942cc74d9ab5f13473f724"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Nandika",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "4:43:11 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943401c587811cbe83ed84"
+  },
+  "course": "Python Course",
+  "lecture": "2",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 3,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:14:01 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943879c587811cbe83ede9"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 2,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:33:05 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649438e8c587811cbe83ee3d"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 4,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:34:56 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943d60c587811cbe83ee7e"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:54:00 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943d60c587811cbe83ee80"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Nandika",
+  "UserId": "648bf0b53c4f5d38ef5ce327",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:54:00 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943e2538e8c4ae9a8bb6bd"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:57:17 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64943e2538e8c4ae9a8bb6bf"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 0,
+  "currentDate": "Thursday, 22 June, 2023",
+  "currentTime": "5:57:17 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6495284d38e8c4ae9a8bb96b"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 1,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "10:36:21 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6495399038e8c4ae9a8bb9f5"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 2,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "11:50:00 am",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64953cf2bb7a0064f1bb1a22"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 4,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "12:04:26 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64954aea38e8c4ae9a8bba65"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 4,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "1:04:02 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64955bf8bb7a0064f1bb1b9b"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 2,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "2:16:48 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64956f52a5c4707ed94d1553"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 4,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "3:39:22 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64957728a5c4707ed94d17a7"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 0,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "4:12:48 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64957728a5c4707ed94d17a5"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 0,
+  "currentDate": "Friday, 23 June, 2023",
+  "currentTime": "4:12:48 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649bccaa4e6efeed7d78f5c7"
+  },
+  "course": "Python Course",
+  "lecture": "1",
+  "user": "Suny",
+  "UserId": "6480345f5e0481194ea78f6a",
+  "score": 0,
+  "currentDate": "Wednesday, June 28, 2023",
+  "currentTime": "6:01:14 AM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649bdb0b4e6efeed7d78f82f"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 6,
+  "currentDate": "Wednesday, June 28, 2023",
+  "currentTime": "7:02:35 AM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649bdb3f4e6efeed7d78f83b"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 4,
+  "currentDate": "Wednesday, June 28, 2023",
+  "currentTime": "7:03:27 AM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649c05354e6efeed7d78fd26"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "Sambhaji",
+  "UserId": "648874b559d86094e5f25036",
+  "score": 4,
+  "currentDate": "Wednesday, June 28, 2023",
+  "currentTime": "10:02:29 AM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "649c2aea4e6efeed7d79019d"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 1,
+  "currentDate": "Wednesday, June 28, 2023",
+  "currentTime": "12:43:22 PM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a18061fcf0a1abaf6883ac"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 3,
+  "currentDate": "Sunday, July 2, 2023",
+  "currentTime": "1:49:22 PM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64a1813efcf0a1abaf688430"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 1,
+  "currentDate": "Sunday, July 2, 2023",
+  "currentTime": "1:53:02 PM",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64af9cb2a4951095abb8e69a"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "640ebe86f6ac1c73985059b3",
+  "score": 4,
+  "currentDate": "Thursday, 13 July, 2023",
+  "currentTime": "12:11:54 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b101b9f95521701d42dec0"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 1,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:35:14 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b101cef95521701d42ded9"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 1,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:35:34 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b101eaf95521701d42def2"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 1,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:36:02 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b1020ef95521701d42df0b"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 2,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:36:38 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b10253f95521701d42df24"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 4,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:37:47 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b10265f95521701d42df3d"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 3,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "1:38:05 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b121fbf95521701d42e0f7"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 1,
+  "currentDate": "Friday, 14 July, 2023",
+  "currentTime": "3:52:51 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b4f398f95521701d42e86a"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 3,
+  "currentDate": "Monday, 17 July, 2023",
+  "currentTime": "1:24:01 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64b4f41ef95521701d42e8a3"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "arun",
+  "UserId": "64b0f206f95521701d42d9b3",
+  "score": 3,
+  "currentDate": "Monday, 17 July, 2023",
+  "currentTime": "1:26:14 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb509a346fadaf52ec8b59"
+  },
+  "course": "MongoDB Basics",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "64cb4f58346fadaf52ec8a57",
+  "score": 4,
+  "currentDate": "Thursday, 3 August, 2023",
+  "currentTime": "12:30:42 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64cb528a346fadaf52ec8be6"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "Rahul",
+  "UserId": "64cb4f58346fadaf52ec8a57",
+  "score": 4,
+  "currentDate": "Thursday, 3 August, 2023",
+  "currentTime": "12:38:58 pm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "653b5a7351816fdc23840c00"
+  },
+  "course": "React JS",
+  "lecture": "1",
+  "user": "a",
+  "UserId": "65360600cf75738c6f62d58d",
+  "score": 5,
+  "currentDate": "Friday, 27 October, 2023",
+  "currentTime": "12:06:36 pm",
+  "__v": 0
+}]

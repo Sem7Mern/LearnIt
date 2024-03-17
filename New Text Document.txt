@@ -1,0 +1,29 @@
+import React from 'react'
+import "./Test.css"
+import { useNavigate } from 'react-router-dom';
+function Test() {
+    const navigate = useNavigate();
+    function GiveCurrent(params) {
+        navigate('/subjects')
+    }
+  return (
+
+       <div className="test">
+      <div className='tleft'>
+        <h2 style={{position:"absolute", top:"28px", color:"white"}}>Give current syllabus Test</h2>
+        <button onClick={GiveCurrent} className="btn btn-primary">Give Test</button>
+      </div>
+      <div className='tright'>
+        <h2 style={{position:"absolute", top:"28px"}}>Check Your Grasping Power</h2>
+        <button onClick={GiveCurrent} className="btn btn-primary">Give Test</button>
+      </div>
+    </div>
+   
+
+  )
+}
+
+export default Test
+
+
+give me css for above file in which there should be 2 parts in page on is for current syllabus test and second for grasping power test and wrap those sections in separate container and add background image as per that and buttons should be in center and there content will be in center in there respected containers

@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "654386c81b150f9a6ee114eb"
+  },
+  "name": "Sara Patel",
+  "email": "sarapatel@example.com",
+  "password": "tutor987"
+},{
+  "_id": {
+    "$oid": "654386c81b150f9a6ee114ec"
+  },
+  "name": "Anjali Jadhav",
+  "email": "anjalijadhav@example.com",
+  "password": "instructor456"
+},{
+  "_id": {
+    "$oid": "654386c81b150f9a6ee114ed"
+  },
+  "name": "Suresh Deshmukh",
+  "email": "sureshdeshmukh@example.com",
+  "password": "educator789"
+},{
+  "_id": {
+    "$oid": "654386c81b150f9a6ee114ee"
+  },
+  "name": "Ankit Sharma",
+  "email": "ankiksharma@example.com",
+  "password": "teacher123"
+}]

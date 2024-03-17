@@ -1,0 +1,42 @@
+.options-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the wrapper to fill the viewport */
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px; /* Increased width by 10% */
+  width: 100%;
+}
+
+.option-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  margin: 0 10px; /* Optional margin between boxes */
+  text-decoration: none; /* Remove text decoration */
+}
+
+.option-box a{
+  text-decoration: none;
+  color: black;
+}
+.option-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(194, 42, 42, 0.2);
+}
+
+.option-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.option-box p {
+  color: #666;
+}

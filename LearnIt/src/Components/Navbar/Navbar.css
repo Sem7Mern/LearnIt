@@ -1,0 +1,47 @@
+.bg-light , .dropdown-menu{
+    background-color: rgba(46, 43, 41, 0.58)!important;
+    color: white;
+}
+
+nav{
+    z-index: 10;
+}
+.nav-link{
+    font-weight: bold;
+    background-color: rgba(26, 24, 23, 0.58)!important;
+    border: 2px solid black;
+    border-radius: 48%;
+    margin-right: 40px;
+   
+    
+
+}
+
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: white;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+

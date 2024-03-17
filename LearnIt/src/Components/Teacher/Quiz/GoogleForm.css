@@ -1,0 +1,15 @@
+/* GoogleForm.css */
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .google-form-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .google-form-box {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+  

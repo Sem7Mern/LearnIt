@@ -42,7 +42,7 @@ const Rectanglebox = () => {
       <div className="std-container">
         <div className="rectangle-box">
           <div className="image-container">
-            <img src="/Profilepicture.jpg" alt="Student" className="round-image" />
+            {/* <img src="/Profilepicture.jpg"   /> */}
           </div>
           <div className="info-container">
             <p>{`Name: ${studentData.name}`}</p>

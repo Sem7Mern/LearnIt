@@ -10,6 +10,8 @@
   padding: 20px;
   margin-top: 60px;
   height: auto;
+  border-radius: 10px;
+
 }
 
 .input-container {
@@ -37,6 +39,8 @@
   margin-top: 61px;
   height: 900px;
   text-align: left;
+  border-radius: 10px;
+
 }
 
 .rightside h2 {

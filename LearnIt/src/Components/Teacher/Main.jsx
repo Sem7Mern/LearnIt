@@ -114,7 +114,7 @@ function Main() {
   
  </div>
       {/* Navigation */}
-      <div className={`left-nav ${showMenu ? 'show' : ''}`}>
+      <div className={`left-navM ${showMenu ? 'show' : ''}`}>
       <h1>
         Learnit
         </h1>
@@ -148,7 +148,7 @@ function Main() {
       {/* Main content */}
       <div style={{ position: "relative", top: "10px", height: "auto", overflow: "auto", width: "100%" }}>
         {home && (
-          <div className="main-contentteacher">
+          <div className="main-contentteacherM">
             <div className="welcome-msg">
               <h1>Good Morning, Rajvardhan</h1>
               <div className="Welcomebox">

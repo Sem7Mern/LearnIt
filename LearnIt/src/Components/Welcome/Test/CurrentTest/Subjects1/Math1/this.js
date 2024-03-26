@@ -8,22 +8,22 @@ import '../Quiz1.css';
 import fetchquiz from '../../../fetchquiz.js';
 import { postcurrentTestR } from '../../../../../../service/quizapi';
 
-function Math2() {
+function Science2() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
     const [clickedOption, setClickedOption] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [message, setmessage] = useState(null);
     const [selectedOptions, setSelectedOptions] = useState([]);
-    const [Mathdata2, setMathdata2] = useState([]);
+    const [Sciencedata2, setSciencedata2] = useState([]);
 
     useLayoutEffect(() => {
         const fetchingquiz = async () => {
             console.log("fetching quiz");
-            let test = await fetchquiz("maths2");
-            const mathData = test.subjecttest["questions"];
-            setMathdata2(mathData);
-            setSelectedOptions(new Array(mathData.length).fill(0));
+            let test = await fetchquiz("science2");
+            const scienceData = test.subjecttest["questions"];
+            setSciencedata1(scienceData);
+            setSelectedOptions(new Array(scienceData.length).fill(0));
         }
         fetchingquiz();
     }, []);
@@ -35,19 +35,19 @@ function Math2() {
 
     const changeQuestion = () => {
         updateScore();
-        if (currentQuestion < Mathdata2.length - 1) {
+        if (currentQuestion < Sciencedata2.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
             setClickedOption(selectedOptions[currentQuestion + 1]);
         } else {
             setShowResult(true);
             let email = localStorage.getItem("email");
-            const cResult = { maths: score };
+            const cResult = { science: score };
             postcurrentTestR(email, cResult);
         }
     }
 
     const updateScore = () => {
-        if (clickedOption == Mathdata2[currentQuestion].correct_answer) {
+        if (clickedOption == Sciencedata1[currentQuestion].correct_answer) {
             console.log("score updated");
             setScore(score + 1);
         }
@@ -77,25 +77,25 @@ function Math2() {
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ display: 'flex-center', margin: '0 50px' }}>
-                <p className="heading-txt">Math1 APP</p>
+                <p className="heading-txt">Science2 APP</p>
                 <div className="container" style={{ width: '1100px' }}>
                     <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                        <span id="question-count">{currentQuestion + 1}/{Mathdata2.length}</span>
+                        <span id="question-count">{currentQuestion + 1}/{Sciencedata2.length}</span>
                     </div>
                     {showResult || message === "Time is up!" ? (
                         <QuizResult
                             message={message}
                             score={score}
-                            totalScore={Mathdata2.length}
+                            totalScore={Sciencedata2.length}
                             tryAgain={resetAll} />
                     ) : (
                         <>
                             <div className="question">
                                 <span id="question-number">{currentQuestion + 1}. </span>
-                                <span id="question-txt">{Mathdata2[currentQuestion]?.question}</span>
+                                <span id="question-txt">{Sciencedata1[currentQuestion]?.question}</span>
                             </div>
                             <div className="option-container">
-                                {Mathdata2[currentQuestion]?.options.map((option, i) => {
+                                {Sciencedata2[currentQuestion]?.options.map((option, i) => {
                                     return (
                                         <button
 
@@ -121,7 +121,7 @@ function Math2() {
     )
 }
 
-export default Math2;
+export default Science2;
 
 
 

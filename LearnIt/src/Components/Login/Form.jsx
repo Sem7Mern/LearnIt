@@ -4,13 +4,14 @@ import { slogin } from "../../service/studentapi";
 import { plogin } from "../../service/parentapi";
 import { tlogin } from "../../service/teacherapi";
 import './Form.css';
+import Navbar from '../Navbar/Navbar';
 
-function Form() {
+function Form({credentials , setCredentials}) {
   const location = useLocation();
   const currentPath = location.pathname;
   const pathWithoutSlash = currentPath.substring(1);
   const navigate = useNavigate(); // Use useNavigate instead of useHistory
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
+
   const [error, setError] = useState("");
 
   const onChange = (e) => {
@@ -46,7 +47,8 @@ else{
     const json = await a.json();
 
     if (json.success) {
-      localStorage.setItem("email", json.email);
+      console.log(json.user.email);
+      localStorage.setItem("email", json.user.email);
       navigate("/mainscreen");
 
 
@@ -77,6 +79,8 @@ else{
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="login-container">
       <span className="login-heading">{pathWithoutSlash}</span>
       <div className="form">
@@ -100,6 +104,7 @@ else{
         </form>
       </div>
     </div>
+    </>
   );
 }
 

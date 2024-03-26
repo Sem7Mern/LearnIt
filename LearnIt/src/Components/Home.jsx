@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.css'
+import Navbar from './Navbar/Navbar';
 const HomePage = () => {
     const containerStyle = {
         display: 'flex',
@@ -26,6 +27,9 @@ const HomePage = () => {
 
 
     return (
+        <>
+        
+            <Navbar/>
         <div className='homediv' >
             <header >
                 <h1>LearnIt</h1>
@@ -33,6 +37,7 @@ const HomePage = () => {
             </header>
 
         </div>
+        </>
     );
 }
 

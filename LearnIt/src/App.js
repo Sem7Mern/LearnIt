@@ -3,7 +3,7 @@ import './App.css';
 
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Form from './Components/Login/Form';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
 
 
 import Performance from './Components/Performance/Performance';
@@ -45,7 +45,6 @@ import MathsVideo from './Components/Welcome/Content/MathsVideo.js';
 import ScienceVideo from './Components/Welcome/Content/ScienceVideo.js';
 import SocialVideo from './Components/Welcome/Content/SocialVideo.js';
 import { useEffect, useState } from 'react';
-
 import Inbox from './Components/Teacher/notice.jsx';
 import Chatbot from './Components/Parent/Chatbot.jsx';
 import Category from './Components/Teacher/Category.jsx';
@@ -57,11 +56,13 @@ import Blank from './Components/Teacher/Blank.jsx';
 import Options from './Components/Teacher/Options.jsx';
 import Calender from './Components/Parent/Calender.jsx';
 import Home1 from './Components/Home1.jsx';
+import AccessDeniedPage from './Components/AccessDenied/AccessDeniedPage.jsx';
 function App() {
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
+useEffect(() => {
+  setCredentials({ ...credentials, "email": localStorage.getItem("email") });
 
-
-
-
+}, [])
 
   return (
 
@@ -70,7 +71,7 @@ function App() {
 
       <Router>
 
-        <Navbar /> 
+      
 
 
      
@@ -84,12 +85,17 @@ function App() {
            
 
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/StudentLogin" element={<Form />} />
-          <Route exact path="/ParentLogin" element={<Form />} />
-          <Route exact path="/TeacherLogin" element={<Form />} />
-          <Route exact path="/Welcome" element={<Welcome />} />
+          <Route exact path="/StudentLogin" element={<Form credentials ={credentials} setCredentials = {setCredentials} />} />
+          <Route exact path="/ParentLogin" element={<Form credentials ={credentials} setCredentials = {setCredentials} />} />
+          <Route exact path="/TeacherLogin" element={<Form credentials ={credentials} setCredentials = {setCredentials}  />} />
+     
+       { credentials.email ?(
+ 
+        <>
+          <Route exact path="/Welcome" element={ <Welcome />} />
+
           <Route exact path="/instructions" element={<Instruction />} />
-          {/* <Route exact path="/instructions1" element={<instructions1 />} /> */}
+        
           <Route exact path="/Subjects_Content" element={<Subjects_Content />} />
           <Route exact path="/MathsVideo" element={<MathsVideo />} />
           <Route exact path="/ScienceVideo" element={< ScienceVideo />} />
@@ -97,7 +103,7 @@ function App() {
           <Route exact path="/inbox" element={<Inbox />} />
 
 
-
+         
 
 
 
@@ -125,7 +131,7 @@ function App() {
 
 
 
-          {/* <----------------- Teacher Section ------------> */}
+ 
 
           <Route exact path="/main" element={<Main />} />
           <Route exact path="/classes" element={<Classes />} />
@@ -152,8 +158,11 @@ function App() {
           <Route exact path="/studentprofile" element={<Profile />} />
           <Route exact path="/calender" element={<Calender/>} />
 
+        </>
 
-
+          ):(<Route exact path="*" element={<AccessDeniedPage/>} />)
+          
+          }
         </Routes >
       </Router >
 

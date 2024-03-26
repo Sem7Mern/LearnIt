@@ -17,7 +17,7 @@ function Math1() {
     
         const fetchingquiz = async ()=>{
             console.log("fetching quiz");
-            let test = await fetchquiz("social1");
+            let test = await fetchquiz("maths1");
             setMathdata1(test.subjecttest["questions"]);
         
         }
@@ -42,7 +42,8 @@ function Math1() {
         }
     }
     const updateScore = () => {
-        if (clickedOption === Mathdata1[currentQuestion].answer) {
+        if (clickedOption == Mathdata1[currentQuestion].correct_answer) {
+            console.log("scoreupdated");
             setScore(score + 1);
         }
     }
@@ -85,7 +86,7 @@ function Math1() {
                     </>)}
             </div>
         </div>
-                            {!showResult ? <Clock  onChildDataChange={handleChildDataChange} />:null} 
+                          { /*!showResult ? <Clock  onChildDataChange={handleChildDataChange} />:null*/} 
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Test.css"
+//import "./Test.css"
 import { useNavigate } from 'react-router-dom';
 function Test() {
   const navigate = useNavigate();
@@ -11,8 +11,8 @@ function Test() {
   }
   return (
 
-    <div className="test">
-      <div className='tleft'>
+    <div className="test" style={{ Width: '1000px', height: "800px" }}>
+      <div className='tleft' style={{ maxWidth: '800px' }}>
         <h2 style={{ position: "absolute", top: "145px", fontSize: '25px', color: 'red', fontWeight: '900' }}>Current syllabus Test</h2>
         <h3 style={{ color: "green", fontWeight: '650', marginBottom: '20px' }}>Read below instructions carefully</h3>
         <div style={{ justifyContent: 'left', fontWeight: '500' }}>

@@ -14,11 +14,11 @@ function Instruction() {
             className="test"
             style={{
                 backgroundImage:
-                    "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhGsoYPMLs9wCwwRcPiFpYev3M1_8JFEGMeiY7EzwtSA&s')",
+                    "url('https://e0.pxfuel.com/wallpapers/412/514/desktop-wallpaper-notice-board-vintage-frame-background-powerpoint-power-point-old-powerpoint.jpg')",
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center center',
-                height: '100vh',
+                height: '120vh',
                 position: 'relative',
                 display: 'flex',
                 justifyContent: 'center',
@@ -30,22 +30,22 @@ function Instruction() {
                 style={{
                     width: '60%',
                     height: '500px',
-                    background: 'white',
+                    background: 'lightblue',
                     textAlign: 'center',
-                    border: '2px solid black',
                     borderRadius: '20px',
                 }}
             >
-                <h2
+                <h3
                     style={{
-                        fontSize: '30px',
-                        color: 'red',
-                        fontWeight: '900',
+                        fontSize: '20px',
+                        color: 'black',
+                        fontWeight: '800',
                         marginTop: '50px',
+                        marginBottom: "30px"
                     }}
                 >
                     Here are some important points you need to know regarding tests
-                </h2>
+                </h3>
 
                 <div style={{ fontWeight: '500', justifyContent: 'center' }}>
                     <ol className="instructions" style={{ marginLeft: '100px' }}>
@@ -74,11 +74,13 @@ function Instruction() {
                         </li>
                     </ol>
                 </div>
-                <h3 style={{ color: 'black', fontWeight: '650', marginBottom: '20px' }}>
+                <h3 style={{ color: 'red', fontWeight: '650', marginBottom: '20px', marginTop: "30px" }}>
                     All the best
                 </h3>
                 <button
                     style={{
+                        width: "200px",
+                        marginLeft: "330px",
                         background: 'green',
                         ':hover': { background: 'red' }, // Add hover effect
                     }}
